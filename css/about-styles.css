@@ -1,0 +1,161 @@
+.about-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: calc(var(--padding-large) * 2);
+    position: relative;
+    background-color: var(--secondary-bg-color); /* Adding dark background */
+    border-radius: var(--border-radius);
+}
+
+/* Add a subtle gradient accent in the background */
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.about-container h1 {
+    color: var(--accent-color);
+    font-size: calc(var(--font-size-large) * 2);
+    text-align: center;
+    margin-bottom: calc(var(--margin-large) * 2);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    /* Add text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    display: grid;
+    gap: calc(var(--spacing-unit) * 8);
+    background: transparent;
+}
+
+.about-content section {
+    display: grid;
+    gap: var(--spacing-unit) * 2;
+    /* Add hover effect */
+    transition: transform var(--transition-speed) ease;
+}
+
+.about-content section:hover {
+    transform: translateY(-5px);
+}
+
+.about-content h2 {
+    color: var(--accent-color);
+    font-size: calc(var(--font-size-large) * 1.2);
+    font-weight: 600;
+    margin-bottom: var(--margin-medium);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit);
+}
+
+/* Add decorative element before headings */
+.about-content h2::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.about-content p {
+    color: var(--secondary-text-color); /* Using the gray from variables */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 65ch;
+    margin: 0 auto;
+    /* Add subtle animation on hover */
+    transition: color var(--transition-speed) ease;
+}
+
+.about-content section:hover p {
+    color: var(--primary-text-color); /* Using white from variables for hover */
+}
+
+.about-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    padding: 0.2em 0.4em;
+}
+
+.about-content a:hover {
+    color: var(--link-hover-color);
+    background-color: rgba(122, 193, 66, 0.1); /* Semi-transparent accent color */
+    border-radius: var(--border-radius);
+}
+
+.about-content a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--link-hover-color);
+    transform: scaleX(0);
+    transition: transform var(--transition-speed) ease;
+}
+
+.about-content a:hover::after {
+    transform: scaleX(1);
+}
+
+.contact-section {
+    margin-top: calc(var(--margin-large) * 2);
+    text-align: center;
+    padding: calc(var(--padding-large) * 1.5);
+    background-color: var(--tertiary-bg-color);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(122, 193, 66, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-section:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(122, 193, 66, 0.15); /* Subtle glow effect */
+}
+
+.contact-section h2 {
+    margin-bottom: calc(var(--margin-medium) * 1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 2rem auto;
+        padding: var(--padding-large);
+    }
+
+    .about-container h1 {
+        font-size: calc(var(--font-size-large) * 1.5);
+        margin-bottom: var(--margin-large);
+    }
+
+    .about-content {
+        gap: calc(var(--spacing-unit) * 4);
+    }
+
+    .contact-section {
+        margin-top: var(--margin-large);
+        padding: var(--padding-large);
+    }
+
+    .about-content section:hover {
+        transform: none; /* Disable hover effect on mobile */
+    }
+} 
