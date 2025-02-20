@@ -1,0 +1,43 @@
+:root {
+  /* Primary Colors */
+  --primary-bg-color: #fff6e5; /* Warm cream background */
+  --primary-text-color: #2c1810; /* Deep brown for text */
+  --accent-color: #d64d25; /* Vibrant red-orange, reminiscent of Vietnamese cuisine */
+  --highlight-color: #ff6b3d; /* Lighter version of accent for hover states */
+  --secondary-text-color: #5c4842; /* Muted brown for secondary text */
+
+  /* Additional color variations */
+  --secondary-bg-color: #fffaf0; /* Lighter cream for contrast */
+  --tertiary-bg-color: #fef0dc; /* Slightly darker cream for depth */
+  --button-bg-color: #d64d25; /* Same as accent */
+  --button-text-color: #ffffff; /* White text on buttons */
+  --link-color: #c14524; /* Darker red-orange for links */
+  --link-hover-color: #ff6b3d; /* Brighter orange for hover */
+
+  /* Typography */
+  --font-family-primary: 'Open Sans', 'Arial', sans-serif; /* Clean, modern font */
+  --font-family-secondary: 'Playfair Display', 'Georgia', serif; /* Elegant serif for headings */
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-small: 14px;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --margin-small: calc(var(--spacing-unit) * 1);
+  --margin-medium: calc(var(--spacing-unit) * 2);
+  --margin-large: calc(var(--spacing-unit) * 4);
+  --padding-small: calc(var(--spacing-unit) * 1);
+  --padding-medium: calc(var(--spacing-unit) * 2);
+  --padding-large: calc(var(--spacing-unit) * 4);
+
+  /* Borders */
+  --border-color: #e8c8a9; /* Warm beige for borders */
+  --border-radius: 8px; /* Slightly larger radius for softer look */
+  --border-width: 1px;
+
+  /* Shadows */
+  --box-shadow: 0 2px 12px rgba(44, 24, 16, 0.08); /* Soft shadow with brand color */
+
+  /* Transitions */
+  --transition-speed: 0.3s;
+} 
