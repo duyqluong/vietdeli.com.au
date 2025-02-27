@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header-footer-styles.css">
     <link rel="stylesheet" href="css/menu-styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <?php 
@@ -359,5 +360,6 @@
         // Trigger scroll event on page load to set initial active state
         window.dispatchEvent(new Event('scroll'));
     </script>
+    <script src="js/main.js"></script>
 </body>
 </html> 
