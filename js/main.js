@@ -5,20 +5,20 @@ hamburger.classList.add('hamburger');
 hamburger.innerHTML = '☰';
 document.querySelector('.main-nav').appendChild(hamburger);
 
-// Ensure menu is hidden initially on mobile
+// Add mobile-nav-hidden class instead of using inline styles
 if (window.innerWidth <= 768) {
-    nav.style.display = 'none';
+    nav.classList.add('mobile-nav-hidden');
 }
 
 hamburger.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    nav.classList.toggle('mobile-nav-hidden');
 });
 
 // Close mobile menu when clicking a link
 nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
-            nav.style.display = 'none';
+            nav.classList.add('mobile-nav-hidden');
         }
     });
 }); 
