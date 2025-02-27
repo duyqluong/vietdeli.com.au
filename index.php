@@ -22,7 +22,7 @@
                 <span class="decorative-icon">🍜</span>
                 <h1>Welcome to Viet Deli</h1>
                 <p>Experience authentic North Vietnamese cuisine crafted by our family. Bringing the genuine flavors of Hanoi to Perth, we pour our hearts into every traditional dish we serve.</p>
-                <a href="menu.html" class="btn">View Menu</a>
+                <a href="menu" class="btn">View Menu</a>
             </div>
             <div class="hero-decoration">
                 <span></span>
@@ -75,6 +75,6 @@
     <!-- Include footer -->
     <?php include 'footer.html'; ?>
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
