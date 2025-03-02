@@ -1,0 +1,40 @@
+.menu-lightbox {
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 90vw;
+  max-height: 90vh;
+  background: transparent;
+}
+
+.menu-lightbox::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.menu-lightbox button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-lightbox button:hover {
+  background: rgba(0, 0, 0, 0.8);
+} 

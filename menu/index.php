@@ -6,7 +6,6 @@
  * URL path: /menu/
  * 
  * Sections included:
- * - Contact Information
  * - Banh Mi
  * - Pho
  * - Vermicelli (Bun)
@@ -20,34 +19,27 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/header-footer-styles.css">
-    <link rel="stylesheet" href="css/menu-styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php 
+$root = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/' : $_SERVER['DOCUMENT_ROOT'] . '/';
+include $root . 'head.html'; 
+?>
+<!-- Page-specific head elements -->
+<title>Menu - Viet Deli Restaurant</title>
+<meta name="description" content="Explore our authentic Vietnamese menu featuring Banh Mi, Pho, Rice Dishes, and more at Viet Deli Restaurant.">
+<base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
+<link rel="stylesheet" href="css/menu-styles.css">
 </head>
 <body>
     <?php 
-    $root = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/' : $_SERVER['DOCUMENT_ROOT'] . '/';
     include $root . 'header.html'; 
     ?>
     
     <div class="container">
-        <nav class="menu-nav">
-            <ul>
-                <li><a href="#banh-mi"><span class="dot"></span><span class="section-name">Banh Mi</span></a></li>
-                <li><a href="#pho"><span class="dot"></span><span class="section-name">Pho</span></a></li>
-                <li><a href="#vermicelli"><span class="dot"></span><span class="section-name">Vermicelli</span></a></li>
-                <li><a href="#rice"><span class="dot"></span><span class="section-name">Rice</span></a></li>
-                <li><a href="#bao"><span class="dot"></span><span class="section-name">Bao</span></a></li>
-                <li><a href="#salad"><span class="dot"></span><span class="section-name">Viet Salad</span></a></li>
-                <li><a href="#fresh-rolls"><span class="dot"></span><span class="section-name">Fresh Rolls</span></a></li>
-                <li><a href="#side-dishes"><span class="dot"></span><span class="section-name">Side Dishes</span></a></li>
-                <li><a href="#drinks"><span class="dot"></span><span class="section-name">Drinks</span></a></li>
-            </ul>
-        </nav>
+        <div class="menu-header">
+            <h1>Our Authentic Vietnamese Menu</h1>
+            <p class="welcome-text">Welcome to Viet Deli! We're proud to serve Perth's most authentic Vietnamese cuisine, prepared fresh daily with traditional recipes and quality ingredients. From our signature Banh Mi sandwiches to steaming bowls of Pho, each dish is crafted with care and passion for the flavors of Vietnam.</p>
+            <p class="dietary-note">Many of our dishes can be made gluten-free (GF) or vegetarian (v). Please ask our friendly staff about any dietary requirements or allergies.</p>
+        </div>
 
         <div class="menu-section" id="banh-mi">
             <h2>Banh Mi</h2>
@@ -312,54 +304,6 @@
     </div>
 
     <?php include $root . 'footer.html'; ?>
-
-    <script>
-        const SCROLL_OFFSET = 120; // Matching the top: 120px from the CSS
-
-        // Helper function to check if an element is in viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight / 2) &&
-                rect.bottom >= (window.innerHeight / 2)
-            );
-        }
-
-        document.querySelectorAll('.menu-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Update active section on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.menu-section, .contact-info');
-            const navLinks = document.querySelectorAll('.menu-nav a');
-            
-            sections.forEach(section => {
-                if (isInViewport(section)) {
-                    const id = section.getAttribute('id');
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        });
-
-        // Trigger scroll event on page load to set initial active state
-        window.dispatchEvent(new Event('scroll'));
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html> 
