@@ -59,15 +59,17 @@
         <section class="features">
             <div class="feature">
                 <h2>A Family Tradition in Vietnamese Cuisine</h2>
-                <p>Viet Deli is a family-owned Vietnamese eatery, proudly bringing the authentic flavors of Vietnam to Perth. Located in Myaree, near Applecross and Fremantle Port, we serve fresh, traditional dishes made daily with the highest quality ingredients.</p>
                 
-                <div class="feature-image">
-                    <img src="images/banh-mi-viet-deli.JPG" alt="Authentic Vietnamese Banh Mi Sandwiches from Viet Deli Perth">
-                    <div class="feature-image-caption">Our authentic Vietnamese dishes prepared with traditional recipes</div>
+                <div class="feature-with-image">
+                    <div class="image-side">
+                        <img src="images/banh-mi-viet-deli.JPG" alt="Authentic Vietnamese Banh Mi Sandwiches from Viet Deli Perth">
+                    </div>
+                    <div class="text-side">
+                        <p>Viet Deli is a family-owned Vietnamese eatery, proudly bringing the authentic flavors of Vietnam to Perth. Located in Myaree, near Applecross and Fremantle Port, we serve fresh, traditional dishes made daily with the highest quality ingredients.</p>
+                        <p>Our founder, born in Hanoi and raised in Saigon, brings a unique culinary blend that harmonizes the rich flavors of North and South Vietnam. This fusion makes our dishes truly special, offering a taste of home for Vietnamese food lovers and an exciting journey for those new to Vietnamese cuisine.</p>
+                    </div>
                 </div>
-                
-                <p>Our founder, born in Hanoi and raised in Saigon, brings a unique culinary blend that harmonizes the rich flavors of North and South Vietnam. This fusion makes our dishes truly special, offering a taste of home for Vietnamese food lovers and an exciting journey for those new to Vietnamese cuisine.</p>
-                
+
                 <div class="feature-highlights">
                     <div class="highlight-item">
                         <h3>Phở</h3>
@@ -86,38 +88,36 @@
                         <p>Fresh vermicelli noodle bowls with herbs and savory meats, perfect for a light and refreshing meal.</p>
                     </div>
                 </div>
-                <a href="menu" class="feature-link">Explore Our Full Vietnamese Menu</a>
-            </div>
-            
-            <div class="feature">
-                <h2>Family-Owned Vietnamese Deli in Perth</h2>
-                
-                <div class="feature-with-image">
-                    <div class="image-side">
+
+                <div class="menu-cta">
+                    <a href="menu" class="feature-link">Explore Our Full Vietnamese Menu</a>
+                </div>
+
+                <div class="store-contact-wrapper">
+                    <div class="store-image-side">
                         <img src="images/viet-deli-store.JPG" alt="Viet Deli Shop Interior in Perth with Fresh Baguettes">
                     </div>
-                    <div class="text-side">
-                        <p>Located in the heart of Myaree, near Applecross and Fremantle Port, Viet Deli is a family-owned Vietnamese eatery bringing authentic flavors to Perth. We specialize in fresh, traditional dishes made daily with the highest quality ingredients, offering both takeaway and limited dine-in options.</p>
+
+                    <div class="contact-section">
+                        <h2>Visit Us Today</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h3>Call Us</h3>
+                                <p><a href="tel:0893176708">08 9317 6708</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Visit Us</h3>
+                                <p>Unit 14/47 McCoy Street, Myaree, Perth, WA 6154</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:Jessicangavu@gmail.com">Jessicangavu@gmail.com</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <p>Every dish at Viet Deli is prepared with care, following traditional recipes passed down through generations. We believe in using fresh ingredients, bold flavors, and authentic cooking techniques to bring you a true taste of Vietnam.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <h3>Call Us</h3>
-                        <p><a href="tel:0893176708">08 9317 6708</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Visit Us</h3>
-                        <p>Unit 14/47 McCoy Street, Myaree, Perth, WA 6154</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Email Us</h3>
-                        <p><a href="mailto:Jessicangavu@gmail.com">Jessicangavu@gmail.com</a></p>
-                    </div>
-                </div>
-                <a href="https://maps.google.com?q=Unit+14/47+McCoy+Street+Myaree+Perth+WA+6154" class="feature-link" target="_blank">Get Directions to Our Vietnamese Deli</a>
+                <a href="https://maps.google.com?q=Unit+14/47+McCoy+Street+Myaree+Perth+WA+6154" class="feature-link" target="_blank">Get Directions to Viet Deli</a>
             </div>
             
             <div class="feature">
@@ -150,13 +150,12 @@
 
         <section class="cta-pickup">
             <div class="cta-pickup-container">
-                <h2>Ready to Order?</h2>
-                <p>We offer phone orders for quick and convenient pickup.</p>
-                <div class="phone-number">
-                    <i class="phone-icon"></i>
-                    <a href="tel:0893176708">08 9317 6708</a>
+                <h2>Order Now</h2>
+                <p>Quick and convenient online ordering available!</p>
+                <div class="btn-container">
+                    <a href="https://district1saigoncafe.orderup.com.au/stores/district-1-saigon-caf-" class="btn btn-primary">Order Online</a>
                 </div>
-                <p class="cta-note">Call us to place your order and we'll have it ready when you arrive!</p>
+                <p class="cta-note">Or call us to place your order: <a href="tel:0893176708">08 9317 6708</a></p>
                 <div class="hours-summary">
                     <p>Open Monday - Sunday</p>
                     <p>11am - 3pm & 5pm - 8pm</p>

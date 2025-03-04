@@ -28,13 +28,15 @@
     margin-bottom: 1.25rem;
     position: relative;
     padding-bottom: 0.75rem;
+    text-align: center;
 }
 
 .feature h2::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 3px;
     background-color: var(--accent-color);
@@ -103,13 +105,16 @@
 
 /* Rest of the existing styles */
 .feature-link {
-    display: inline-block;
+    display: block;
     color: var(--accent-color);
     font-weight: 600;
     text-decoration: none;
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
+    margin: 1.5rem auto;
+    text-align: center;
+    width: fit-content;
 }
 
 .feature-link::after {
@@ -380,5 +385,124 @@
     
     .phone-number a {
         font-size: 1.5rem;
+    }
+}
+
+/* Store contact wrapper */
+.store-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .store-contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+}
+
+/* Store image side */
+.store-image-side {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.store-image-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .store-image-side {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Contact section */
+.contact-section {
+    background: var(--secondary-bg-color);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--accent-gold), var(--accent-color));
+    border-radius: 12px 12px 0 0;
+}
+
+.contact-section h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-text-color);
+}
+
+/* Feature link styling */
+.feature-link {
+    display: block;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+    margin: 1.5rem auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.feature-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.feature-link:hover {
+    color: var(--highlight-color);
+}
+
+.feature-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .store-image-side {
+        max-width: 320px;
+        margin: 0 auto 2rem;
+        padding: 0.75rem;
+    }
+    
+    .store-image-side::before {
+        display: none;
+    }
+    
+    .contact-section {
+        padding: 2rem 1.5rem;
     }
 } 
