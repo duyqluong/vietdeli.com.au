@@ -16,12 +16,13 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Authentic Vietnamese Cuisine at Viet Deli</h1>
-                <p>Experience authentic North Vietnamese cuisine crafted by our family. Bringing the genuine flavors of Hanoi to Perth, we pour our hearts into every traditional dish we serve.</p>
+                <h1>Welcome to <em>Viet Deli</em> - Authentic Vietnamese Street Food in Perth!</h1>
+                <p>At Viet Deli, we bring the vibrant flavors of Vietnam straight to Perth. From crispy <em>Bánh Mì</em> and aromatic <em>Phở</em> to flavorful <em>Cơm</em> and fresh <em>Bún</em>, our dishes are crafted with love, using traditional recipes and the freshest ingredients. Whether you're craving a quick bite or a comforting meal, we serve up authentic Vietnamese street food just the way it's meant to be.</p>
+                <p>Come and experience the true taste of Vietnam at Viet Deli.</p>
                 
                 <div class="btn-container">
-                    <a href="/order" class="btn btn-primary">Order Now</a>
-                    <a href="/reservations" class="btn btn-secondary">Book a Table</a>
+                    <a href="https://district1saigoncafe.orderup.com.au/stores/district-1-saigon-caf-" class="btn btn-primary">Order Now</a>
+                    <a href="menu/" class="btn btn-secondary">See Menu</a>
                 </div>
                 
                 <div class="food-collage">
@@ -29,10 +30,10 @@
                         <img src="images/pho-png.png" alt="Vietnamese Pho">
                     </div>
                     <div class="food-image">
-                        <img src="images/spring-rolls-png.png" alt="Fresh Spring Rolls">
+                        <img src="images/banh-mi-png.png" alt="Banh Mi Sandwich">
                     </div>
                     <div class="food-image">
-                        <img src="images/banh-mi-png.png" alt="Banh Mi Sandwich">
+                        <img src="images/vermicelli-bowl-viet-deli.png" alt="Vietnamese Vermicelli Bowl">
                     </div>
                 </div>
                 
@@ -57,32 +58,32 @@
 
         <section class="features">
             <div class="feature">
-                <h2>Authentic Vietnamese Cuisine in Perth</h2>
-                <p>At Viet Deli, we pride ourselves on serving the most authentic Vietnamese food in Perth. Our signature dishes showcase the perfect balance of fresh herbs, aromatic spices, and traditional cooking techniques that define Vietnamese cuisine.</p>
+                <h2>A Family Tradition in Vietnamese Cuisine</h2>
+                <p>Viet Deli is a family-owned Vietnamese eatery, proudly bringing the authentic flavors of Vietnam to Perth. Located in Myaree, near Applecross and Fremantle Port, we serve fresh, traditional dishes made daily with the highest quality ingredients.</p>
                 
                 <div class="feature-image">
                     <img src="images/banh-mi-viet-deli.JPG" alt="Authentic Vietnamese Banh Mi Sandwiches from Viet Deli Perth">
                     <div class="feature-image-caption">Our authentic Vietnamese dishes prepared with traditional recipes</div>
                 </div>
                 
-                <p>From our steaming bowls of Phở with rich, slow-simmered broth to our crispy Bánh Mì sandwiches filled with perfectly seasoned meats and fresh vegetables, every dish tells the story of Vietnam's culinary heritage. Our chefs, trained in traditional Northern Vietnamese cooking methods, ensure each meal delivers the genuine flavors of Hanoi right here in Perth.</p>
+                <p>Our founder, born in Hanoi and raised in Saigon, brings a unique culinary blend that harmonizes the rich flavors of North and South Vietnam. This fusion makes our dishes truly special, offering a taste of home for Vietnamese food lovers and an exciting journey for those new to Vietnamese cuisine.</p>
                 
                 <div class="feature-highlights">
                     <div class="highlight-item">
                         <h3>Phở</h3>
-                        <p>Our signature Vietnamese noodle soup, featuring a rich 12-hour bone broth, rice noodles, and your choice of premium meats.</p>
+                        <p>Fragrant noodle soup with slow-cooked broth, made with traditional recipes passed down through generations.</p>
                     </div>
                     <div class="highlight-item">
                         <h3>Bánh Mì</h3>
-                        <p>Perth's favorite Vietnamese sandwich with crispy baguette, housemade pâté, and your choice of traditional fillings.</p>
+                        <p>Crispy baguette sandwiches with flavorful fillings, combining the best of Vietnamese and French cuisine.</p>
                     </div>
                     <div class="highlight-item">
-                        <h3>Vermicelli Bowls</h3>
-                        <p>Fresh rice noodles topped with your choice of protein, crisp vegetables, herbs, and our signature dipping sauce.</p>
+                        <h3>Cơm</h3>
+                        <p>Hearty rice dishes with a variety of toppings, offering a true taste of Vietnamese home cooking.</p>
                     </div>
                     <div class="highlight-item">
-                        <h3>Bún Chả</h3>
-                        <p>Hanoi's famous dish of grilled pork served with vermicelli noodles, fresh herbs, and a savory dipping sauce.</p>
+                        <h3>Bún</h3>
+                        <p>Fresh vermicelli noodle bowls with herbs and savory meats, perfect for a light and refreshing meal.</p>
                     </div>
                 </div>
                 <a href="menu" class="feature-link">Explore Our Full Vietnamese Menu</a>
@@ -96,32 +97,32 @@
                         <img src="images/viet-deli-store.JPG" alt="Viet Deli Shop Interior in Perth with Fresh Baguettes">
                     </div>
                     <div class="text-side">
-                        <p>Located in the heart of Myaree, Viet Deli is a family-owned Vietnamese sandwich shop bringing authentic flavors to Perth. Our deli specializes in freshly-made Bánh Mì sandwiches using traditional family recipes and quality ingredients sourced locally whenever possible.</p>
+                        <p>Located in the heart of Myaree, near Applecross and Fremantle Port, Viet Deli is a family-owned Vietnamese eatery bringing authentic flavors to Perth. We specialize in fresh, traditional dishes made daily with the highest quality ingredients, offering both takeaway and limited dine-in options.</p>
                     </div>
                 </div>
                 
-                <p>We focus primarily on takeaway, offering the best Vietnamese sandwiches in Perth, though we do have limited seating for those who wish to dine in. Our small, welcoming space is perfect for a quick lunch or casual meal, with the authentic atmosphere of a true Vietnamese deli.</p>
+                <p>Every dish at Viet Deli is prepared with care, following traditional recipes passed down through generations. We believe in using fresh ingredients, bold flavors, and authentic cooking techniques to bring you a true taste of Vietnam.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
                         <h3>Call Us</h3>
-                        <p><a href="tel:0893176708">0893 176 708</a></p>
+                        <p><a href="tel:0893176708">08 9317 6708</a></p>
                     </div>
                     <div class="contact-item">
                         <h3>Visit Us</h3>
-                        <p>Unit 14/47 McCoy Street, Myaree, Perth, WA</p>
+                        <p>Unit 14/47 McCoy Street, Myaree, Perth, WA 6154</p>
                     </div>
                     <div class="contact-item">
                         <h3>Email Us</h3>
-                        <p><a href="mailto:info@vietdeli.com.au">info@vietdeli.com.au</a></p>
+                        <p><a href="mailto:Jessicangavu@gmail.com">Jessicangavu@gmail.com</a></p>
                     </div>
                 </div>
-                <a href="https://maps.google.com?q=Unit+14/47+McCoy+Street+Myaree+Perth+WA" class="feature-link" target="_blank">Get Directions to Our Vietnamese Deli</a>
+                <a href="https://maps.google.com?q=Unit+14/47+McCoy+Street+Myaree+Perth+WA+6154" class="feature-link" target="_blank">Get Directions to Our Vietnamese Deli</a>
             </div>
             
             <div class="feature">
-                <h2>Authentic Vietnamese Street Food in Perth</h2>
-                <p>Craving authentic Vietnamese flavors? Viet Deli offers a diverse menu of traditional Vietnamese street food favorites. From our popular Bánh Mì sandwiches to steaming bowls of Phở, crispy spring rolls, fresh Vermicelli bowls, and flavorful Bao buns – all prepared daily using family recipes handed down through generations.</p>
+                <h2>Experience Authentic Vietnamese Street Food</h2>
+                <p>At Viet Deli, we take pride in serving authentic Vietnamese street food, made fresh every day. Every dish is prepared with care, following traditional recipes passed down through generations. We believe in using fresh ingredients, bold flavors, and authentic cooking techniques to bring you a true taste of Vietnam.</p>
                 
                 <div class="feature-image">
                     <a href="menu/" class="menu-link" title="Click to view our full menu">
@@ -130,7 +131,7 @@
                     <div class="feature-image-caption">Our full menu features a variety of authentic Vietnamese dishes</div>
                 </div>
                 
-                <p>Try our crispy Pork Belly Bánh Mì, flavorful Beef Phở, refreshing Vietnamese Salad (Gỏi), or delicious Rice dishes with your choice of protein. We also offer Fresh Rolls, Salt & Pepper Squid, and authentic Vietnamese coffee. Call ahead to place your order for quick pickup and skip the wait!</p>
+                <p>Whether you're looking for a quick bite or a comforting meal, we have something for everyone. From our signature Phở with fragrant broth to crispy Bánh Mì sandwiches, hearty Cơm rice dishes, and fresh Bún noodle bowls - each dish offers an authentic taste of Vietnam right here in Perth.</p>
                 
                 <div class="hours-container">
                     <h3>Catch Us While We're Fresh!</h3>
@@ -153,7 +154,7 @@
                 <p>We offer phone orders for quick and convenient pickup.</p>
                 <div class="phone-number">
                     <i class="phone-icon"></i>
-                    <a href="tel:0893176708">0893 176 708</a>
+                    <a href="tel:0893176708">08 9317 6708</a>
                 </div>
                 <p class="cta-note">Call us to place your order and we'll have it ready when you arrive!</p>
                 <div class="hours-summary">

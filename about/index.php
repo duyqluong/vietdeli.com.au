@@ -40,7 +40,7 @@
             
             <section class="contact-section">
                 <h2>Contact Us</h2>
-                <p>Have questions? Call us at <a href="tel:0893176708">0893 176 708</a> or <a href="sms:0893176708">send us a text</a></p>
+                <p>Have questions? Call us at <a href="tel:0893176708">08 9317 6708</a> or <a href="sms:0490146689">send us a text</a></p>
             </section>
         </div>
     </div>

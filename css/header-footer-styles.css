@@ -133,7 +133,7 @@
 
 /* Footer Styles */
 .site-footer {
-    background-color: #1e293b; /* Changed to darker slate blue */
+    background-color: #2D1B2E; /* Rich aubergine color */
     color: #ffffff;
     padding: 4rem 0 1.5rem 0;
     margin-top: 4rem;
@@ -147,7 +147,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(to right, var(--accent-color), #1e293b); /* Updated gradient end color */
+    background: linear-gradient(to right, var(--accent-gold), var(--accent-color)); /* Updated gradient to tie in brand colors */
 }
 
 .footer-container {
