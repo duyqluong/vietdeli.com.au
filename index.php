@@ -94,8 +94,8 @@
                 </div>
 
                 <div class="store-contact-wrapper">
-                    <div class="store-image-side">
-                        <img src="images/viet-deli-store.JPG" alt="Viet Deli Shop Interior in Perth with Fresh Baguettes">
+                    <div class="store-image">
+                        <img src="images/store-wall-viet-deli.JPG" alt="Viet Deli Shop Interior in Perth with Vietnamese Decor">
                     </div>
 
                     <div class="contact-section">
