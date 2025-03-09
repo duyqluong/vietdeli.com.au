@@ -61,18 +61,20 @@
 .about-content h2::before {
     content: '';
     display: block;
-    width: 30px;
-    height: 2px;
+    width: 40px;
+    height: 3px;
     background-color: var(--accent-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .about-content p {
-    color: var(--secondary-text-color); /* Using the gray from variables */
-    line-height: 1.8;
-    font-size: 1.1rem;
-    max-width: 65ch;
+    color: var(--secondary-text-color);
+    line-height: 1.7;
+    font-size: 1.15rem;
+    max-width: 60ch;
     margin: 0 auto;
+    letter-spacing: -0.2px;
+    font-weight: 400;
     /* Add subtle animation on hover */
     transition: color var(--transition-speed) ease;
 }
@@ -134,7 +136,67 @@
     margin-bottom: calc(var(--margin-medium) * 1.5);
 }
 
-/* Responsive Design */
+/* Mission Section Specific Styles */
+.about-content h3 {
+    color: var(--accent-color);
+    font-size: calc(var(--font-size-large) * 1.15);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-top: calc(var(--margin-large) * 2);
+    margin-bottom: calc(var(--margin-medium) * 1.5);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit);
+}
+
+.about-content h3::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-top: var(--margin-medium);
+    display: grid;
+    gap: var(--spacing-unit);
+}
+
+.about-content ul li {
+    color: var(--secondary-text-color);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* Custom bullet point */
+.about-content ul li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    left: -1rem;
+    font-size: 1.2em;
+}
+
+.about-content ul li strong {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-right: 0.3em;
+}
+
+/* Remove the previous hover effects and backgrounds */
+.about-content ul li:hover {
+    transform: none;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+/* Add responsive styles for the mission section */
 @media (max-width: 768px) {
     .about-container {
         margin: 2rem auto;
@@ -142,8 +204,8 @@
     }
 
     .about-container h1 {
-        font-size: calc(var(--font-size-large) * 1.5);
-        margin-bottom: var(--margin-large);
+        font-size: calc(var(--font-size-large) * 1.8);
+        letter-spacing: -0.8px;
     }
 
     .about-content {
@@ -158,4 +220,144 @@
     .about-content section:hover {
         transform: none; /* Disable hover effect on mobile */
     }
+
+    .about-content ul {
+        gap: var(--spacing-unit);
+    }
+
+    .about-content ul li {
+        padding: var(--padding-small);
+    }
+
+    .about-content ul li:hover {
+        transform: none; /* Disable hover effect on mobile */
+    }
+
+    .about-content h2 {
+        font-size: calc(var(--font-size-large) * 1.2);
+    }
+
+    .about-content p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+}
+
+/* Update Legacy Image Styling */
+.legacy-image {
+    margin: calc(var(--margin-large) * 1.5) auto;
+    max-width: 500px; /* Reduced from 600px to maintain better quality */
+    text-align: center;
+    position: relative;
+}
+
+.legacy-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(122, 193, 66, 0.1);
+    transition: transform var(--transition-speed) ease;
+    object-fit: cover; /* Ensures image covers area nicely */
+    image-rendering: -webkit-optimize-contrast; /* Improves sharpness on webkit browsers */
+    image-rendering: crisp-edges; /* Modern browsers */
+    -webkit-backface-visibility: hidden; /* Reduces blur on hover in Safari */
+    backface-visibility: hidden;
+    filter: brightness(1.02) contrast(1.02); /* Subtle enhancement */
+}
+
+/* Optional: Add a subtle overlay on hover */
+.legacy-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(122, 193, 66, 0.05);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    pointer-events: none;
+    border-radius: var(--border-radius);
+}
+
+.legacy-image:hover::after {
+    opacity: 1;
+}
+
+.image-caption {
+    margin-top: calc(var(--margin-medium) * 0.8);
+    font-style: italic;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .legacy-image {
+        margin: var(--margin-large) auto;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .legacy-image {
+        max-width: 450px; /* Further reduce size on larger screens */
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .about-container h1 {
+        font-size: calc(var(--font-size-large) * 1.8);
+        letter-spacing: -0.8px;
+    }
+
+    .about-content h2 {
+        font-size: calc(var(--font-size-large) * 1.2);
+    }
+
+    .about-content p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+}
+
+/* Add smooth font rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.about-content p + p {
+    margin-top: calc(var(--margin-medium) * 1.5);
+    position: relative;
+}
+
+/* Optional: Add a subtle visual separator */
+.about-content p + p::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--margin-medium) * -0.75);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    opacity: 0.3;
+}
+
+.about-content em {
+    font-style: normal;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.about-content em:hover {
+    color: var(--primary-text-color);
+    text-shadow: 0 0 8px var(--accent-color);
 } 
