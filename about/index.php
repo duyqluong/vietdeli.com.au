@@ -30,12 +30,31 @@
         <div class="about-content">
             <section>
                 <h2>Who We Are</h2>
-                <p>Welcome to Viet Deli. We are passionate about bringing authentic Vietnamese cuisine to your table, offering a delightful blend of traditional flavors and fresh ingredients that capture the essence of Vietnam's rich culinary heritage.</p>
+                <p>Viet Deli is <em>Perth's beloved destination</em> for authentic Vietnamese cuisine. We take pride in serving delightful dishes that capture the <em>essence of Vietnam's rich culinary heritage</em>, bringing fresh ingredients and traditional flavors to every meal we prepare.</p>
+                
+                <div class="legacy-image">
+                    <img src="images/district-1-saigon-cafe-founders.jpg" alt="Our team preparing banh mi" class="history-image">
+                    <p class="image-caption">A cherished memory from our early days, when we first started sharing our love for Vietnamese cuisine</p>
+                </div>
+
+                <p>While some may remember us as District 1 Saigon Cafe, we've <em>grown and evolved</em> to become Viet Deli, continuing our passion for bringing <em>authentic Vietnamese flavors</em> to our community.</p>
             </section>
             
             <section>
                 <h2>Our Mission</h2>
-                <p>Our mission is to share the authentic taste of Vietnamese cuisine with our community. We believe in preserving traditional recipes while using the freshest ingredients to create memorable dining experiences. Every dish we serve carries the warmth and hospitality that Vietnamese food culture is known for.</p>
+                <p>At Viet Deli, our mission is simple: to bring a <em>taste of Vietnam to the heart of Perth</em>. We strive to create a <em>welcoming space</em> where everyone—whether you're Vietnamese or simply a lover of great food—can experience the bold, authentic flavors of Vietnam.</p>
+                
+                <p>Every dish we serve carries the <em>warmth and hospitality</em> that Vietnamese food culture is known for. Through our carefully crafted menu, we share not just meals, but a <em>piece of our heritage</em> with our community.</p>
+            </section>
+            
+            <section>
+                <h2>Our Commitments</h2>
+                <ul>
+                    <li><strong>Authenticity</strong> – Preserving the true flavors of Vietnamese cuisine using traditional recipes passed down through generations.</li>
+                    <li><strong>Quality</strong> – Using fresh, high-quality ingredients to ensure every dish is made to perfection.</li>
+                    <li><strong>Family & Community</strong> – Sharing the warmth and hospitality of Vietnamese culture, treating every customer like family.</li>
+                    <li><strong>Sustainability</strong> – Supporting ethical sourcing of ingredients and minimizing waste to protect the environment.</li>
+                </ul>
             </section>
             
             <section class="contact-section">
