@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../config/constants.php';
 require_once BASE_PATH . '/config/database.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/config/Auth.php';
+require_once BASE_PATH . '/config/Auth.php';
 
 session_start();
 
