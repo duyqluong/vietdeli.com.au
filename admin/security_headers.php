@@ -1,14 +1,13 @@
 <?php
-// Prevent caching of admin pages
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-
-// Security headers
-header("X-Content-Type-Options: nosniff");
-header("X-Frame-Options: DENY");
+// Set security headers
+header("X-Frame-Options: SAMEORIGIN");
 header("X-XSS-Protection: 1; mode=block");
+header("X-Content-Type-Options: nosniff");
+header("Referrer-Policy: strict-origin-when-cross-origin");
+header("Content-Security-Policy: default-src 'self'");
 
-// Content Security Policy
-header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'");
+// Prevent caching of sensitive pages
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
 ?> 
