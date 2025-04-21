@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="blog-home">
+    <h1>VietDeli Blog</h1>
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "blog") }}
+    {{ range $paginator.Pages }}
+    <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        {{ with .Description }}
+            <p>{{ . }}</p>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+{{ end }} 

@@ -1,35 +1,17 @@
 <?php
-/**
- * Menu Page - Viet Deli Restaurant
- * 
- * This file displays the main menu page with all food and drink items.
- * URL path: /menu/
- * 
- * Sections included:
- * - Banh Mi
- * - Pho
- * - Vermicelli (Bun)
- * - Rice Dishes
- * - Bao
- * - Vietnamese Salad (Goi)
- * - Fresh Rolls
- * - Side Dishes
- * - Drinks
- */
+require_once __DIR__ . '/../config/constants.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-$root = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/' : $_SERVER['DOCUMENT_ROOT'] . '/';
-include $root . 'head.html'; 
-?>
-<title>Vietnamese Delicious Street Food - Viet Deli Restaurant</title>
-<meta name="description" content="Explore our authentic Vietnamese street food menu featuring Banh Mi, Pho, Rice Dishes, and more at Viet Deli Restaurant in Perth.">
-<base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
-<link rel="stylesheet" href="css/menu-styles.css">
+<head>
+    <base href="<?php echo SITE_URL; ?>">
+    <?php include BASE_PATH . '/head.html'; ?>
+    <title>Vietnamese Delicious Street Food - Viet Deli Restaurant</title>
+    <meta name="description" content="Explore our authentic Vietnamese street food menu featuring Banh Mi, Pho, Rice Dishes, and more at Viet Deli Restaurant in Perth.">
+    <link rel="stylesheet" href="css/menu-styles.css">
 </head>
 <body>
-    <?php include $root . 'header.html'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'header.html'; ?>
     
     <div class="container">
         <div class="menu-header">
@@ -300,19 +282,19 @@ include $root . 'head.html';
             <h2>Drink Menu</h2>
             <div class="menu-item">
                 <span class="menu-item-name">Vietnamese Ice Coffee with Milk (Ca phe sua da)</span>
-                <span class="menu-item-price">$6.00</span>
+                <span class="menu-item-price">$5.30</span>
             </div>
             <div class="menu-item">
                 <span class="menu-item-name">Vietnamese Ice Coffee (Ca phe den da)</span>
-                <span class="menu-item-price">$5.50</span>
-            </div>
-            <div class="menu-item">
-                <span class="menu-item-name">Vietnamese Hot Black Coffee (Ca phe den nong)</span>
                 <span class="menu-item-price">$5.00</span>
             </div>
             <div class="menu-item">
+                <span class="menu-item-name">Vietnamese Hot Black Coffee (Ca phe den nong)</span>
+                <span class="menu-item-price">$4.50</span>
+            </div>
+            <div class="menu-item">
                 <span class="menu-item-name">Vietnamese Hot Cafe with Milk (Ca phe sua nong)</span>
-                <span class="menu-item-price">$5.50</span>
+                <span class="menu-item-price">$4.80</span>
             </div>
             <div class="menu-item">
                 <span class="menu-item-name">Vietnamese Green Tea (Tra Thai Nguyen)</span>
@@ -325,7 +307,7 @@ include $root . 'head.html';
         </div>
     </div>
 
-    <?php include $root . 'footer.html'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'footer.html'; ?>
     <script src="js/main.js"></script>
 </body>
 </html> 

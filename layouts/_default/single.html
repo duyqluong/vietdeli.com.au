@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="blog-post">
+    <h1>{{ .Title }}</h1>
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
+    {{ .Content }}
+    <p><a href="/blog/">← Back to Blog</a></p>
+</article>
+{{ end }} 
