@@ -1,15 +1,10 @@
 <?php
-/**
- * About Page - Viet Deli Restaurant
- * 
- * This file displays the about page with company information.
- * URL path: /about/
- */
+require_once __DIR__ . '/../config/constants.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
+    <base href="<?php echo SITE_URL; ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Viet Deli</title>
@@ -19,10 +14,7 @@
     <link rel="stylesheet" href="css/about-styles.css">
 </head>
 <body>
-    <?php 
-    $root = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/' : $_SERVER['DOCUMENT_ROOT'] . '/';
-    include $root . 'header.html'; 
-    ?>
+    <?php include BASE_PATH . '/header.html'; ?>
 
     <div class="about-container">
         <h1>About Viet Deli</h1>
@@ -64,7 +56,7 @@
         </div>
     </div>
 
-    <?php include $root . 'footer.html'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'footer.html'; ?>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -31,3 +31,7 @@ yarn-error.log*
 *.psd
 *.ai
 *.sketch
+
+# User-generated content
+uploads/
+uploads/**/*
