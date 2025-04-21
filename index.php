@@ -1,10 +1,10 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/config/constants.php';
+require_once __DIR__ . '/config/constants.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <!-- Include head -->
-    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'head.html'; ?>
+    <?php include __DIR__ . '/head.html'; ?>
     
     <!-- Add page-specific meta and title -->
     <title>Viet Deli | Vietnamese Banh Mi & Pho Restaurant | Perth</title>
@@ -15,7 +15,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/config/constants.php';
     <link rel="stylesheet" href="css/gallery.css">
 <body>
     <!-- Include header -->
-    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'header.html'; ?>
+    <?php include __DIR__ . '/header.html'; ?>
 
     <main>
         <section class="hero">
@@ -175,7 +175,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vietdeli/config/constants.php';
     </dialog>
 
     <!-- Include footer -->
-    <?php include $_SERVER['DOCUMENT_ROOT'] . SITE_URL . 'footer.html'; ?>
+    <?php include __DIR__ . '/footer.html'; ?>
 
     <script src="js/main.js"></script>
 </body>
