@@ -1,49 +1,79 @@
 <?php
 require_once __DIR__ . '/../../config/constants.php';
 require_once BASE_PATH . '/config/database.php';
+require_once BASE_PATH . '/includes/functions.php';
 session_start();
 
 if (!isset($_SESSION['admin'])) {
-    header('Location: index.php');
+    header('Location: ' . SITE_URL . 'admin/');
     exit;
 }
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'] ?? '';
-    $description = $_POST['description'] ?? '';
-    $slug = createSlug($name);
+    $name = trim($_POST['name'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    
+    if (empty($name)) {
+        $error = "Category name is required.";
+    } else {
+        $slug = createSlug($name);
 
-    try {
-        // Check if category with same name exists
-        $stmt = $pdo->prepare("SELECT COUNT(*) FROM categories WHERE name = ?");
-        $stmt->execute([$name]);
-        if ($stmt->fetchColumn() > 0) {
-            $error = "A category with this name already exists.";
-        } else {
-            $stmt = $pdo->prepare("INSERT INTO categories (name, slug, description) VALUES (?, ?, ?)");
-            $stmt->execute([$name, $slug, $description]);
-            $success = "Category created successfully";
+        try {
+            // Check if category with same name or slug exists
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM categories WHERE name = ? OR slug = ?");
+            $stmt->execute([$name, $slug]);
+            if ($stmt->fetchColumn() > 0) {
+                $error = "A category with this name or slug already exists.";
+            } else {
+                $stmt = $pdo->prepare("INSERT INTO categories (name, slug, description) VALUES (?, ?, ?)");
+                if ($stmt->execute([$name, $slug, $description])) {
+                    $_SESSION['success'] = "Category created successfully";
+                    header('Location: ' . SITE_URL . 'admin/blog/categories.php');
+                    exit;
+                } else {
+                    $error = "Failed to create category";
+                }
+            }
+        } catch (PDOException $e) {
+            $error = "Error creating category: " . $e->getMessage();
         }
-    } catch (PDOException $e) {
-        $error = "Error creating category: " . $e->getMessage();
     }
 }
 
 // Get all categories with post counts
-$categories = $pdo->query("
-    SELECT c.*, COUNT(pc.post_id) as post_count 
-    FROM categories c 
-    LEFT JOIN post_categories pc ON c.id = pc.category_id 
-    GROUP BY c.id 
-    ORDER BY c.name
-")->fetchAll();
+try {
+    $categories = $pdo->query("
+        SELECT c.*, COUNT(pc.post_id) as post_count 
+        FROM categories c 
+        LEFT JOIN post_categories pc ON c.id = pc.category_id 
+        GROUP BY c.id 
+        ORDER BY c.name
+    ")->fetchAll();
+} catch (PDOException $e) {
+    $error = "Error fetching categories: " . $e->getMessage();
+    $categories = [];
+}
+
+// Get the base URL for admin
+$baseUrl = SITE_URL . 'admin/blog/';
+
+// Check for session messages
+if (isset($_SESSION['success'])) {
+    $success = $_SESSION['success'];
+    unset($_SESSION['success']);
+}
+
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    unset($_SESSION['error']);
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
+    <base href="<?php echo SITE_URL; ?>">
     <?php include '../../head.html'; ?>
     <title>Manage Categories - Blog Admin - Viet Deli</title>
     <link rel="stylesheet" href="css/blog.css">
@@ -53,7 +83,7 @@ $categories = $pdo->query("
     <div class="admin-panel">
         <div class="admin-header">
             <h1>Manage Categories</h1>
-            <a href="blog/admin/" class="back-button">← Back to Dashboard</a>
+            <a href="<?php echo SITE_URL; ?>admin/blog/" class="back-button">← Back to Blog Management</a>
         </div>
         
         <?php if (isset($success)): ?>
@@ -84,6 +114,9 @@ $categories = $pdo->query("
 
             <div class="categories-list">
                 <h2>Existing Categories</h2>
+                <?php if (empty($categories)): ?>
+                    <p>No categories found.</p>
+                <?php else: ?>
                 <table class="admin-table">
                     <thead>
                         <tr>
@@ -102,10 +135,10 @@ $categories = $pdo->query("
                                 <td><?php echo htmlspecialchars($category['description']); ?></td>
                                 <td><?php echo $category['post_count']; ?></td>
                                 <td>
-                                    <a href="blog/admin/edit-category.php?id=<?php echo $category['id']; ?>" 
+                                    <a href="<?php echo $baseUrl; ?>edit-category.php?id=<?php echo $category['id']; ?>" 
                                        class="action-link edit">Edit</a>
                                     <?php if ($category['post_count'] == 0): ?>
-                                        <a href="blog/admin/delete-category.php?id=<?php echo $category['id']; ?>" 
+                                        <a href="<?php echo $baseUrl; ?>delete-category.php?id=<?php echo $category['id']; ?>" 
                                            class="action-link delete"
                                            onclick="return confirm('Are you sure you want to delete this category?')">Delete</a>
                                     <?php endif; ?>
@@ -114,6 +147,7 @@ $categories = $pdo->query("
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <?php endif; ?>
             </div>
         </div>
     </div>

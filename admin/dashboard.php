@@ -6,7 +6,7 @@ require_once 'auth_check.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="<?php echo (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) ? '/vietdeli/' : '/'; ?>">
+    <base href="<?php echo SITE_URL; ?>">
     <?php include '../head.html'; ?>
     <title>Admin Dashboard - Viet Deli</title>
     <link rel="stylesheet" href="css/admin.css">
