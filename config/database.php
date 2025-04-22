@@ -8,8 +8,9 @@ $dbUser = getenv('DB_USER');
 $dbPass = getenv('DB_PASSWORD');
 
 try {
+    // Connect directly to the database
     $pdo = new PDO(
-        "mysql:host=" . $dbHost . ";charset=utf8mb4",
+        "mysql:host=" . $dbHost . ";dbname=" . $dbName . ";charset=utf8mb4",
         $dbUser,
         $dbPass,
         [
@@ -19,11 +20,7 @@ try {
         ]
     );
     
-    // Create database if it doesn't exist
-    $pdo->exec("CREATE DATABASE IF NOT EXISTS `" . $dbName . "`");
-    $pdo->exec("USE `" . $dbName . "`");
-    
-    // Create users table if it doesn't exist
+    // Create tables only if they don't exist
     $pdo->exec("CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
         email VARCHAR(255) UNIQUE NOT NULL,
@@ -33,7 +30,36 @@ try {
         reset_token_expires DATETIME,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    )");
+    ) ENGINE=InnoDB");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS categories (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        slug VARCHAR(255) NOT NULL UNIQUE,
+        description TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS posts (
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        slug VARCHAR(255) NOT NULL UNIQUE,
+        content TEXT NOT NULL,
+        excerpt TEXT,
+        featured_image VARCHAR(255),
+        published BOOLEAN DEFAULT FALSE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS post_categories (
+        post_id INT NOT NULL,
+        category_id INT NOT NULL,
+        PRIMARY KEY (post_id, category_id),
+        FOREIGN KEY (post_id) REFERENCES posts(id) ON DELETE CASCADE,
+        FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB");
     
 } catch(PDOException $e) {
     die("Connection failed: " . $e->getMessage());

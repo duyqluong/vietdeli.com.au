@@ -1,20 +1,23 @@
 <?php
+require_once '../security_headers.php';
+require_once '../auth_check.php';
 require_once __DIR__ . '/../../config/constants.php';
 // No need to require config.php as it's already included in constants.php
 require_once BASE_PATH . '/config/database.php';
-session_start();
+// session_start() is already called in auth_check.php
 
-// Check if user is logged in
-if (!isset($_SESSION['admin'])) {
-    header('Location: index.php');
-    exit;
-}
+// Debug: Log the received ID
+error_log("Received post ID: " . ($_GET['id'] ?? 'null'));
 
 $id = $_GET['id'] ?? null;
 if (!$id) {
-    header('Location: index.php');
+    $_SESSION['error_message'] = "Invalid post ID.";
+    header('Location: ' . SITE_URL . 'admin/blog/');
     exit;
 }
+
+// Debug: Log the ID after validation
+error_log("Validated post ID: " . $id);
 
 // Get existing post data
 $stmt = $pdo->prepare("
@@ -24,8 +27,21 @@ $stmt = $pdo->prepare("
     WHERE p.id = ?
     GROUP BY p.id
 ");
+
+// Debug: Log the SQL query
+error_log("SQL Query: SELECT p.*, GROUP_CONCAT(pc.category_id) as category_ids FROM posts p LEFT JOIN post_categories pc ON p.id = pc.post_id WHERE p.id = " . $id);
+
 $stmt->execute([$id]);
 $post = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// Debug: Log the query result
+error_log("Query result: " . ($post ? "Post found" : "No post found"));
+
+if (!$post) {
+    $_SESSION['error_message'] = "Post not found.";
+    header('Location: ' . SITE_URL . 'admin/blog/');
+    exit;
+}
 
 // Get post categories
 $post_categories = $post['category_ids'] ? explode(',', $post['category_ids']) : [];
@@ -64,17 +80,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         $pdo->commit();
-        header('Location: index.php');
+        $_SESSION['success_message'] = "Post updated successfully.";
+        header('Location: ' . SITE_URL . 'admin/blog/');
         exit;
     } catch (PDOException $e) {
         $pdo->rollBack();
-        $error = "Error updating post: " . $e->getMessage();
+        $_SESSION['error_message'] = "Error updating post: " . $e->getMessage();
+        error_log("Update post error: " . $e->getMessage());
     }
-}
-
-if (!$post) {
-    header('Location: index.php');
-    exit;
 }
 ?>
 
@@ -82,17 +95,22 @@ if (!$post) {
 <html lang="en">
 <head>
     <base href="<?php echo SITE_URL; ?>">
-    <?php include BASE_PATH . '/head.html'; ?>
+    <?php include '../../head.html'; ?>
     <title>Edit Post - Blog Admin - Viet Deli</title>
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/blog.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/admin.css">
 </head>
 <body>
     <div class="admin-panel">
         <h1>Edit Blog Post</h1>
         
-        <?php if (isset($error)): ?>
-            <div class="error-message"><?php echo $error; ?></div>
+        <?php if (isset($_SESSION['error_message'])): ?>
+            <div class="alert alert-danger">
+                <?php 
+                echo $_SESSION['error_message'];
+                unset($_SESSION['error_message']);
+                ?>
+            </div>
         <?php endif; ?>
         
         <form method="POST" class="post-form">
