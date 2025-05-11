@@ -2,9 +2,7 @@
 require_once '../security_headers.php';
 require_once '../auth_check.php';
 require_once __DIR__ . '/../../config/constants.php';
-// No need to require config.php as it's already included in constants.php
 require_once BASE_PATH . '/config/database.php';
-// session_start() is already called in auth_check.php
 
 // Debug: Log the received ID
 error_log("Received post ID: " . ($_GET['id'] ?? 'null'));
