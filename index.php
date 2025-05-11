@@ -25,7 +25,7 @@ require_once __DIR__ . '/config/constants.php';
                 <p>Come and experience the true taste of Vietnam at Viet Deli.</p>
                 
                 <div class="btn-container">
-                    <a href="https://district1saigoncafe.orderup.com.au/stores/district-1-saigon-caf-" class="btn btn-primary">Order Now</a>
+                    <a href="https://vietdeli.orderup.com.au/" class="btn btn-primary">Order Now</a>
                     <a href="menu/" class="btn btn-secondary">See Menu</a>
                 </div>
                 
@@ -115,7 +115,7 @@ require_once __DIR__ . '/config/constants.php';
                             </div>
                             <div class="contact-item">
                                 <h3>Email Us</h3>
-                                <p><a href="mailto:Jessicangavu@gmail.com">Jessicangavu@gmail.com</a></p>
+                                <p><a href="mailto:vietdelipty@gmail.com">vietdelipty@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ require_once __DIR__ . '/config/constants.php';
                 <h2>Order Now</h2>
                 <p>Quick and convenient online ordering available!</p>
                 <div class="btn-container">
-                    <a href="https://district1saigoncafe.orderup.com.au/stores/district-1-saigon-caf-" class="btn btn-primary">Order Online</a>
+                    <a href="https://vietdeli.orderup.com.au/" class="btn btn-primary">Order Now</a>
                 </div>
                 <p class="cta-note">Or call us to place your order: <a href="tel:0893176708">08 9317 6708</a></p>
                 <div class="hours-summary">
