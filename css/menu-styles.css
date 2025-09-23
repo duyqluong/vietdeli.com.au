@@ -85,6 +85,58 @@
     padding-left: var(--spacing-unit);
 }
 
+/* Add-on styling */
+.menu-addon {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin-small);
+    align-items: baseline;
+    padding: calc(var(--padding-small) * 0.8);
+    margin-left: var(--margin-medium);
+    transition: background-color var(--transition-speed);
+    position: relative;
+    font-size: calc(var(--font-size-base) * 0.9);
+}
+
+.menu-addon:hover {
+    background-color: var(--tertiary-bg-color);
+    border-radius: var(--border-radius);
+}
+
+.menu-addon::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--spacing-unit) + 2px);
+    left: var(--padding-medium);
+    right: var(--padding-medium);
+    border-bottom: 1px dotted var(--border-color);
+    margin-top: -4px;
+    z-index: 1;
+}
+
+.menu-addon-name {
+    flex: 1;
+    padding-right: var(--padding-medium);
+    color: var(--secondary-text-color);
+    font-family: var(--font-family-primary);
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+    padding-right: var(--spacing-unit);
+}
+
+.menu-addon-price {
+    color: var(--accent-color);
+    font-weight: bold;
+    white-space: nowrap;
+    font-family: var(--font-family-primary);
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+    padding-left: var(--spacing-unit);
+    font-size: calc(var(--font-size-base) * 0.9);
+}
+
 .note {
     color: var(--secondary-text-color);
     font-size: var(--font-size-small);

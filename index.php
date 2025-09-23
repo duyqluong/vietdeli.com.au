@@ -130,7 +130,7 @@ require_once __DIR__ . '/config/constants.php';
                 
                 <div class="feature-image">
                     <a href="menu/" class="menu-link" title="Click to view our full menu">
-                        <img src="images/menu-viet-deli.jpg" alt="Viet Deli's Authentic Vietnamese Menu in Perth" class="menu-image">
+                        <img src="images/menu.png" alt="Viet Deli's Authentic Vietnamese Menu in Perth" class="menu-image">
                     </a>
                     <div class="feature-image-caption">Our full menu features a variety of authentic Vietnamese dishes</div>
                 </div>
