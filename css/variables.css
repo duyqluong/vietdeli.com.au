@@ -1,27 +1,49 @@
 :root {
-  /* Primary Colors */
-  --primary-bg-color: #f5f9f2; /* Light mint background */
-  --primary-text-color: #043f21; /* Deep forest green for text */
-  --accent-color: #56a343; /* Vibrant medium green */
-  --highlight-color: #6abb54; /* Lighter green for hover states */
-  --secondary-text-color: #2c5a3e; /* Muted green for secondary text */
+  /* CSS Variables generated from Kigen.design */
+  --forest-green-50: #c4ffce;
+  --forest-green-100: #33ff73;
+  --forest-green-200: #0fe05d;
+  --forest-green-300: #0bc551;
+  --forest-green-400: #08ac46;
+  --forest-green-500: #06943b;
+  --forest-green-600: #047f31;
+  --forest-green-700: #026225;
+  --forest-green-800: #014417;
+  --forest-green-900: #002509;
+  --forest-green-950: #001504;
+
+  /* Primary Colors using Forest Green palette */
+  --primary-bg-color: var(--forest-green-50); /* Light forest green background */
+  --primary-text-color: var(--forest-green-900); /* Deep forest green for text */
+  --accent-color: var(--forest-green-500); /* Primary forest green */
+  --highlight-color: var(--forest-green-400); /* Lighter forest green for hover states */
+  --secondary-text-color: var(--forest-green-700); /* Muted forest green for secondary text */
 
   /* Additional color variations */
   --secondary-bg-color: #ffffff; /* White for contrast */
-  --tertiary-bg-color: #e8f4e5; /* Pale green for depth */
-  --button-bg-color: #56a343; /* Same as accent */
+  --tertiary-bg-color: var(--forest-green-100); /* Light forest green for depth */
+  --button-bg-color: var(--forest-green-500); /* Primary forest green for buttons */
   --button-text-color: #ffffff; /* White text on buttons */
-  --link-color: #043f21; /* Deep forest green for links */
-  --link-hover-color: #56a343; /* Medium green for hover */
+  --link-color: var(--forest-green-800); /* Deep forest green for links */
+  --link-hover-color: var(--forest-green-500); /* Primary forest green for hover */
   
   /* Additional accent colors */
   --accent-gold: #d4af37; /* Gold accent for decorative elements */
   --accent-brown: #5c4024; /* Earthy brown to complement the greens */
   --accent-cream: #f8f3e6; /* Warm cream for softer elements */
 
+  /* Semantic color assignments using Forest Green tokens */
+  --error-color: var(--forest-green-600);        /* Error states */
+  --error-light: var(--forest-green-100);        /* Error backgrounds */
+  --warning-color: var(--forest-green-700);      /* Warning states */
+  --danger-color: var(--forest-green-800);       /* Danger/destructive actions */
+  --hot-color: var(--forest-green-500);          /* "Hot" or spicy food indicators */
+  --spicy-accent: var(--forest-green-400);       /* Spicy food highlights */
+
   /* Typography */
-  --font-family-primary: 'Open Sans', 'Arial', sans-serif; /* Clean, modern sans-serif font */
+  --font-family-primary: 'GeneralSans', 'Open Sans', 'Arial', sans-serif; /* Modern GeneralSans font */
   --font-family-secondary: 'Lora', 'Georgia', serif; /* Elegant serif for headings */
+  --font-family-custom: 'GeneralSans', 'Open Sans', 'Arial', sans-serif; /* GeneralSans as custom font */
   --font-size-base: 16px;
   --font-size-large: 24px;
   --font-size-small: 14px;

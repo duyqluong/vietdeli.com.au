@@ -30,7 +30,7 @@ if (!$post) {
     <base href="<?php echo SITE_URL; ?>">
     <?php include '../head.html'; ?>
     <title><?php echo htmlspecialchars($post['title']); ?> - Viet Deli Blog</title>
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/blog.css?v=<?php echo ASSET_VERSION; ?>">
 </head>
 <body>
     <?php include '../header.html'; ?>
@@ -63,11 +63,12 @@ if (!$post) {
             </div>
 
             <div class="post-footer">
-                <a href="/vietdeli/blog/" class="back-to-blog">← Back to Blog</a>
+                <a href="blog/" class="back-to-blog">← Back to Blog</a>
             </div>
         </article>
     </main>
 
     <?php include '../footer.html'; ?>
+    <script src="js/main.js?v=<?php echo ASSET_VERSION; ?>"></script>
 </body>
 </html> 

@@ -1,0 +1,86 @@
+/* GeneralSans Font Declarations */
+
+/* 
+ * GeneralSans - Modern, versatile sans-serif font
+ * Designed by Frode Helland for Indian Type Foundry
+ * Perfect for Vietnamese and English text
+ */
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('../fonts/GeneralSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
+         url('../fonts/GeneralSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('../fonts/GeneralSans-Bold.woff2') format('woff2'),
+         url('../fonts/GeneralSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Vietnamese Font Support Example */
+/*
+@font-face {
+    font-family: 'Inter-Vietnamese';
+    src: url('../fonts/Inter-Vietnamese-Regular.woff2') format('woff2'),
+         url('../fonts/Inter-Vietnamese-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0102-0103, U+1EA0-1EF9, U+0110-0111; /* Vietnamese characters */
+}
+*/
+
+/* Font loading optimization */
+.font-loading {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Custom font classes for easy application */
+.font-primary {
+    font-family: var(--font-family-primary);
+}
+
+.font-secondary {
+    font-family: var(--font-family-secondary);
+}
+
+.font-generalsans {
+    font-family: 'GeneralSans', 'Arial', sans-serif;
+}
+
+/* Font weight utilities for GeneralSans */
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}

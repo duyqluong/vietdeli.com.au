@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Token Usage Examples - Viet Deli</title>
+
+    <!-- Include your existing CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-footer-styles.css">
+    <link rel="stylesheet" href="css/token-examples.css">
+
+    <style>
+        /* Demo page styles */
+        body {
+            font-family: var(--font-family-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--primary-bg-color);
+        }
+
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .demo-section h2 {
+            color: var(--primary-text-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .token-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .color-swatch {
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Design Token Integration Examples</h1>
+    <p>Here's how to use the Monza color tokens from Kigen.design in your Viet Deli website:</p>
+
+    <!-- Color Palette Demo -->
+    <div class="demo-section">
+        <h2>Monza Color Palette</h2>
+        <div class="token-grid">
+            <div class="color-swatch" style="background-color: var(--monza-50); color: var(--monza-900);">
+                Monza 50<br>#feeded
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-100); color: var(--monza-900);">
+                Monza 100<br>#fcd2d1
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-200); color: white;">
+                Monza 200<br>#faa6a5
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-300); color: white;">
+                Monza 300<br>#f97a78
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-400); color: white;">
+                Monza 400<br>#f8433e
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-500); color: white;">
+                Monza 500<br>#da251d
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-600); color: white;">
+                Monza 600<br>#bd1f18
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-700); color: white;">
+                Monza 700<br>#961610
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-800); color: white;">
+                Monza 800<br>#6c0d09
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-900); color: white;">
+                Monza 900<br>#410503
+            </div>
+            <div class="color-swatch" style="background-color: var(--monza-950); color: white;">
+                Monza 950<br>#2b0201
+            </div>
+        </div>
+    </div>
+
+    <!-- Spicy Food Indicators -->
+    <div class="demo-section">
+        <h2>Spicy Food Indicators</h2>
+        <p>Perfect for highlighting spicy Vietnamese dishes:</p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <span>Bún Bò Huế <span class="spicy-indicator">Spicy</span></span>
+            <span>Phở Gà <span class="spicy-indicator">Hot</span></span>
+            <span>Bánh Mì Pate <span class="spicy-indicator">Extra Spicy</span></span>
+        </div>
+    </div>
+
+    <!-- Menu Items with Hot Indicators -->
+    <div class="demo-section">
+        <h2>Menu Items with Hot Indicators</h2>
+        <div style="display: grid; gap: 1rem;">
+            <div class="menu-item-hot" style="padding: 1rem; margin: 0.5rem 0;">
+                <h3>Bún Bò Huế - Spicy Beef Noodle Soup</h3>
+                <p>Traditional spicy beef noodle soup from Central Vietnam</p>
+                <span class="text-hot">$15.50</span>
+            </div>
+
+            <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--border-radius);">
+                <h3>Phở Bò - Beef Noodle Soup</h3>
+                <p>Classic Vietnamese beef noodle soup</p>
+                <span style="color: var(--accent-color);">$14.50</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Examples -->
+    <div class="demo-section">
+        <h2>Button Variations</h2>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn-hot">Order Spicy Food</button>
+            <button
+                style="background-color: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 50px;">Regular
+                Order</button>
+        </div>
+    </div>
+
+    <!-- Alert Examples -->
+    <div class="demo-section">
+        <h2>Alert States</h2>
+        <div class="alert-warning">
+            <strong>Spicy Warning:</strong> This dish contains chili peppers and may be too hot for some customers.
+        </div>
+
+        <div class="error-message">
+            <strong>Error:</strong> Unable to process your spicy food order. Please try again.
+        </div>
+    </div>
+
+    <!-- Form Example -->
+    <div class="demo-section">
+        <h2>Form Validation</h2>
+        <form style="max-width: 400px;">
+            <div style="margin-bottom: 1rem;">
+                <label for="spice-level">Spice Level Preference:</label>
+                <select id="spice-level" name="spice-level"
+                    style="width: 100%; padding: 0.5rem; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                    <option value="mild">Mild</option>
+                    <option value="medium">Medium</option>
+                    <option value="hot">Hot</option>
+                    <option value="extra-hot">Extra Hot</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-error"
+                    style="width: 100%; padding: 0.5rem; border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+                <div class="form-error-message">Please enter a valid email address</div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Status Indicators -->
+    <div class="demo-section">
+        <h2>Status Indicators</h2>
+        <div style="display: grid; gap: 0.5rem;">
+            <div>Bún Bò Huế <span class="status-available">Available</span></div>
+            <div>Phở Gà <span class="status-limited">Limited</span></div>
+            <div>Bánh Mì Pate <span class="status-sold-out">Sold Out</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Simple demo interaction
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Design tokens loaded successfully!');
+            console.log('Available Monza colors:', {
+                monza50: getComputedStyle(document.documentElement).getPropertyValue('--monza-50'),
+                monza500: getComputedStyle(document.documentElement).getPropertyValue('--monza-500'),
+                spicyAccent: getComputedStyle(document.documentElement).getPropertyValue('--spicy-accent')
+            });
+        });
+    </script>
+</body>
+
+</html>
+

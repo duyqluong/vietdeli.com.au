@@ -1,0 +1,158 @@
+/* Design Token Usage Examples for Viet Deli */
+
+/* Example 1: Spicy Food Indicators */
+.spicy-indicator {
+    background-color: var(--spicy-accent);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.spicy-indicator::before {
+    content: "🌶️";
+    margin-right: 0.25rem;
+}
+
+/* Example 2: Error States */
+.error-message {
+    background-color: var(--error-light);
+    color: var(--error-color);
+    border: 1px solid var(--monza-200);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+}
+
+.error-message::before {
+    content: "⚠️";
+    margin-right: 0.5rem;
+}
+
+/* Example 3: Hot/Special Menu Items */
+.menu-item-hot {
+    position: relative;
+    border: 2px solid var(--hot-color);
+    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, var(--monza-50), var(--secondary-bg-color));
+}
+
+.menu-item-hot::after {
+    content: "HOT";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background-color: var(--hot-color);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Example 4: Call-to-Action with Monza accent */
+.btn-hot {
+    background-color: var(--monza-500);
+    color: white;
+    border: none;
+    padding: var(--padding-medium) var(--padding-large);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 2px 8px rgba(218, 37, 29, 0.3);
+}
+
+.btn-hot:hover {
+    background-color: var(--monza-600);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 37, 29, 0.4);
+}
+
+/* Example 5: Warning/Alert States */
+.alert-warning {
+    background-color: var(--monza-100);
+    border-left: 4px solid var(--warning-color);
+    color: var(--monza-800);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Example 6: Form Validation */
+.form-error {
+    border-color: var(--error-color) !important;
+    box-shadow: 0 0 0 2px var(--monza-100);
+}
+
+.form-error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-error-message::before {
+    content: "❌";
+    margin-right: 0.25rem;
+}
+
+/* Example 7: Status Indicators */
+.status-available {
+    color: var(--accent-color);
+}
+
+.status-sold-out {
+    color: var(--monza-600);
+    text-decoration: line-through;
+}
+
+.status-limited {
+    color: var(--monza-500);
+    font-weight: 600;
+}
+
+/* Example 8: Gradient Backgrounds using Monza tokens */
+.hero-spicy {
+    background: linear-gradient(135deg, var(--monza-50), var(--primary-bg-color));
+}
+
+.accent-border {
+    border: 2px solid var(--monza-300);
+    border-radius: var(--border-radius);
+}
+
+/* Example 9: Text Colors */
+.text-hot {
+    color: var(--monza-600);
+}
+
+.text-warning {
+    color: var(--warning-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+/* Example 10: Background Colors */
+.bg-hot-light {
+    background-color: var(--monza-50);
+}
+
+.bg-hot-medium {
+    background-color: var(--monza-100);
+}
+
+.bg-hot-strong {
+    background-color: var(--monza-200);
+}
+
+
