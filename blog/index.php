@@ -37,15 +37,15 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY name")->fetchAll(PD
     <base href="<?php echo SITE_URL; ?>">
     <?php include '../head.html'; ?>
     <title>Blog - Viet Deli</title>
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/blog.css?v=<?php echo ASSET_VERSION; ?>">
 </head>
 <body>
     <?php include '../header.html'; ?>
 
     <main class="blog-main">
         <div class="blog-header">
-            <h1>Viet Deli Blog</h1>
-            <p>Stories, recipes, and updates from our kitchen to yours</p>
+            <h1>Blog</h1>
+            <p>Stories, recipes, and updates from our kitchen</p>
         </div>
 
         <!-- Category Filter -->
@@ -116,5 +116,6 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY name")->fetchAll(PD
     </main>
 
     <?php include '../footer.html'; ?>
+    <script src="js/main.js?v=<?php echo ASSET_VERSION; ?>"></script>
 </body>
 </html> 

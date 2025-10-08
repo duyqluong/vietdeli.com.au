@@ -1,13 +1,11 @@
-/* Header Styles */
+/* Header Styles - Newspaper Design */
 .site-header {
-    background-color: var(--primary-text-color); /* Deep forest green from variables.css */
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-text-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: none;
-    padding: 0.75rem 0;
+    border-bottom: 3px solid var(--accent-color);
+    padding: 1rem 0;
 }
 
 .header-container {
@@ -24,14 +22,9 @@
 }
 
 .logo img {
-    height: 45px;
+    height: 50px;
     width: auto;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     object-fit: contain;
-}
-
-.logo img:hover {
-    transform: scale(1.02);
 }
 
 .main-nav ul {
@@ -45,95 +38,78 @@
 
 .main-nav a {
     text-decoration: none;
-    color: white; /* Changed from var(--primary-text-color) to white for better contrast */
-    font-family: var(--font-family-primary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-    border-radius: 6px;
+    color: white;
+    font-family: var(--font-family-custom);
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color var(--transition-speed) ease;
     position: relative;
 }
 
 .main-nav a:hover {
-    color: var(--accent-gold); /* Changed from var(--accent-color) to gold for better visibility */
-    background-color: transparent;
+    color: var(--accent-color);
 }
 
 .main-nav a::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--accent-gold); /* Changed to match hover color */
-    transition: width 0.3s ease;
+    background-color: var(--accent-color);
+    transition: width var(--transition-speed) ease;
 }
 
 .main-nav a:hover::after {
-    width: 80%;
+    width: 100%;
 }
 
 .main-nav .cta-button {
-    background-color: var(--accent-gold); /* Gold accent for better contrast against dark header */
-    color: var(--primary-text-color); /* Deep forest green text for readability */
+    background: linear-gradient(135deg, var(--forest-green-400) 0%, var(--forest-green-500) 50%, var(--forest-green-600) 100%);
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     transition: all var(--transition-speed) ease;
-    font-weight: 700;
+    font-weight: normal;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(8, 172, 70, 0.3);
     display: inline-flex;
     align-items: center;
     gap: 8px;
     position: relative;
     overflow: hidden;
-    font-size: 0.95rem;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Phone icon using pseudo-element */
-.main-nav .cta-button::before {
-    content: '📞';
-    font-size: 1em;
-    transition: transform var(--transition-speed) ease;
 }
 
 .main-nav .cta-button:hover {
-    background-color: #b89530; /* Darker gold for hover state */
     transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-    color: var(--primary-text-color);
+    box-shadow: 0 6px 20px rgba(8, 172, 70, 0.4);
+    background: linear-gradient(135deg, var(--forest-green-500) 0%, var(--forest-green-600) 50%, var(--forest-green-700) 100%);
+    color: white;
 }
 
-.main-nav .cta-button:hover::before {
-    transform: rotate(-10deg);
+.main-nav .cta-button svg {
+    width: 16px;
+    height: 16px;
+    transition: transform var(--transition-speed) ease;
+    flex-shrink: 0;
 }
 
-/* Remove underline effect */
+.main-nav .cta-button:hover svg {
+    transform: scale(1.1);
+}
+
+/* Remove underline effect for CTA button */
 .main-nav .cta-button::after {
     display: none;
 }
 
-/* Subtle pulse animation */
-@keyframes subtle-pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.01); }
-    100% { transform: scale(1); }
-}
-
-.main-nav .cta-button {
-    animation: subtle-pulse 3s infinite;
-}
-
-.main-nav .cta-button:hover {
-    animation: none;
-}
 
 /* Footer Styles */
 .site-footer {
-    background-color: #2D1B2E; /* Rich aubergine color */
+    background-color: var(--primary-text-color); /* Deep forest green */
     color: #ffffff;
     padding: 4rem 0 1.5rem 0;
     margin-top: 4rem;
@@ -161,51 +137,79 @@
 
 .footer-section h3 {
     color: #ffffff;
-    margin-bottom: 1.2rem;
-    font-size: 1.3rem;
+    font-family: var(--font-family-custom);
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
     position: relative;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
 .footer-section h3::after {
     content: '';
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 40px;
+    left: 0;
+    width: 60px;
     height: 2px;
     background-color: var(--accent-color);
 }
 
 .footer-section p {
-    margin: 0.5rem 0;
-    color: #cbd5e1; /* Lighter gray for better readability */
+    margin: 0.75rem 0;
+    color: #cbd5e1;
     line-height: 1.6;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Override contact-info styles for footer */
+.site-footer .contact-info {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    position: static;
+    border: none;
+    box-shadow: none;
+    display: block;
+    flex-direction: unset;
+    justify-content: unset;
 }
 
 .social-links {
     display: flex;
     gap: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .social-links a {
     color: #ffffff;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
 }
 
 .social-links a:hover {
-    transform: translateY(-3px);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
-    filter: invert(1); /* Makes the black SVG icon white */
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    transition: filter var(--transition-speed) ease;
 }
 
 .social-links a:hover .social-icon {
-    filter: invert(56%) sepia(75%) saturate(1887%) hue-rotate(325deg) brightness(99%) contrast(96%); /* Changes to accent color on hover */
+    filter: invert(56%) sepia(75%) saturate(1887%) hue-rotate(325deg) brightness(99%) contrast(96%);
 }
 
 .footer-bottom {
