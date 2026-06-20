@@ -1,70 +1,102 @@
 :root {
-  /* CSS Variables generated from Kigen.design */
-  --forest-green-50: #c4ffce;
-  --forest-green-100: #33ff73;
-  --forest-green-200: #0fe05d;
-  --forest-green-300: #0bc551;
-  --forest-green-400: #08ac46;
-  --forest-green-500: #06943b;
-  --forest-green-600: #047f31;
-  --forest-green-700: #026225;
-  --forest-green-800: #014417;
-  --forest-green-900: #002509;
-  --forest-green-950: #001504;
+  /* =============================================
+     VIET DELI — PREMIUM COLOR SYSTEM
+     Warm, authentic, elevated Vietnamese dining
+     ============================================= */
 
-  /* Primary Colors using Forest Green palette */
-  --primary-bg-color: var(--forest-green-50); /* Light forest green background */
-  --primary-text-color: var(--forest-green-900); /* Deep forest green for text */
-  --accent-color: var(--forest-green-500); /* Primary forest green */
-  --highlight-color: var(--forest-green-400); /* Lighter forest green for hover states */
-  --secondary-text-color: var(--forest-green-700); /* Muted forest green for secondary text */
+  /* --- Warm Dark Scale (deep rich background tones) --- */
+  --brand-950: #1A0A00;
+  --brand-900: #2B1500;
+  --brand-800: #4A2A0A;
+  --brand-700: #6B3E12;
+  --brand-600: #8A5218;
+  --brand-500: #A86C22;
+  --brand-400: #C9883A;
+  --brand-300: #D9B87A;
+  --brand-200: #EDD9B3;
+  --brand-100: #F7EDD8;
+  --brand-50:  #FDF6EE;
 
-  /* Additional color variations */
-  --secondary-bg-color: #ffffff; /* White for contrast */
-  --tertiary-bg-color: var(--forest-green-100); /* Light forest green for depth */
-  --button-bg-color: var(--forest-green-500); /* Primary forest green for buttons */
-  --button-text-color: #ffffff; /* White text on buttons */
-  --link-color: var(--forest-green-800); /* Deep forest green for links */
-  --link-hover-color: var(--forest-green-500); /* Primary forest green for hover */
-  
-  /* Additional accent colors */
-  --accent-gold: #d4af37; /* Gold accent for decorative elements */
-  --accent-brown: #5c4024; /* Earthy brown to complement the greens */
-  --accent-cream: #f8f3e6; /* Warm cream for softer elements */
+  /* --- Terracotta / Red Accent (primary brand accent) --- */
+  --red-800: #4D1808;
+  --red-700: #722411;
+  --red-600: #952F18;
+  --red-500: #B83A1F;
+  --red-400: #D95F4B;
+  --red-300: #EF8C7E;
+  --red-200: #F8C5BF;
+  --red-100: #FDECEA;
 
-  /* Semantic color assignments using Forest Green tokens */
-  --error-color: var(--forest-green-600);        /* Error states */
-  --error-light: var(--forest-green-100);        /* Error backgrounds */
-  --warning-color: var(--forest-green-700);      /* Warning states */
-  --danger-color: var(--forest-green-800);       /* Danger/destructive actions */
-  --hot-color: var(--forest-green-500);          /* "Hot" or spicy food indicators */
-  --spicy-accent: var(--forest-green-400);       /* Spicy food highlights */
+  /* --- Semantic Tokens --- */
+  --primary-bg-color:       var(--brand-50);
+  --secondary-bg-color:     #FFFFFF;
+  --tertiary-bg-color:      var(--brand-100);
 
-  /* Typography */
-  --font-family-primary: 'GeneralSans', 'Open Sans', 'Arial', sans-serif; /* Modern GeneralSans font */
-  --font-family-secondary: 'Lora', 'Georgia', serif; /* Elegant serif for headings */
-  --font-family-custom: 'GeneralSans', 'Open Sans', 'Arial', sans-serif; /* GeneralSans as custom font */
-  --font-size-base: 16px;
+  --primary-text-color:     var(--brand-950);
+  --secondary-text-color:   var(--brand-700);
+
+  --accent-color:           var(--red-500);
+  --highlight-color:        var(--red-400);
+
+  --button-bg-color:        var(--red-500);
+  --button-text-color:      #FFFFFF;
+  --link-color:             var(--red-600);
+  --link-hover-color:       var(--red-500);
+
+  /* --- Named Accents --- */
+  --accent-gold:  #C9883A;
+  --accent-cream: #F7EDD8;
+  --accent-brown: var(--brand-700);
+
+  /* --- Backward Compatibility Aliases (--forest-green-* → warm tones) ---
+     Every other CSS file that uses --forest-green-* will automatically
+     pick up the new colors without any other file needing to change. */
+  --forest-green-50:  var(--brand-100);
+  --forest-green-100: var(--brand-200);
+  --forest-green-200: var(--brand-400);
+  --forest-green-300: var(--brand-400);
+  --forest-green-400: var(--red-400);
+  --forest-green-500: var(--red-500);
+  --forest-green-600: var(--red-600);
+  --forest-green-700: var(--brand-700);
+  --forest-green-800: var(--brand-800);
+  --forest-green-900: var(--brand-900);
+  --forest-green-950: var(--brand-950);
+
+  /* --- Semantic States --- */
+  --error-color:   var(--red-500);
+  --error-light:   var(--red-100);
+  --warning-color: var(--brand-600);
+  --danger-color:  var(--red-600);
+  --hot-color:     var(--red-500);
+  --spicy-accent:  var(--red-400);
+
+  /* --- Typography --- */
+  --font-family-display:   'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-family-primary:   'DM Sans', 'GeneralSans', 'Open Sans', 'Arial', sans-serif;
+  --font-family-secondary: 'Playfair Display', 'Georgia', serif;
+  --font-family-custom:    'DM Sans', 'GeneralSans', 'Open Sans', 'Arial', sans-serif;
+  --font-size-base:  16px;
   --font-size-large: 24px;
   --font-size-small: 14px;
 
-  /* Spacing */
-  --spacing-unit: 8px;
-  --margin-small: calc(var(--spacing-unit) * 1);
-  --margin-medium: calc(var(--spacing-unit) * 2);
-  --margin-large: calc(var(--spacing-unit) * 4);
-  --padding-small: calc(var(--spacing-unit) * 1);
+  /* --- Spacing --- */
+  --spacing-unit:   8px;
+  --margin-small:   calc(var(--spacing-unit) * 1);
+  --margin-medium:  calc(var(--spacing-unit) * 2);
+  --margin-large:   calc(var(--spacing-unit) * 4);
+  --padding-small:  calc(var(--spacing-unit) * 1);
   --padding-medium: calc(var(--spacing-unit) * 2);
-  --padding-large: calc(var(--spacing-unit) * 4);
+  --padding-large:  calc(var(--spacing-unit) * 4);
 
-  /* Borders */
-  --border-color: #c9e0c2; /* Light green for borders */
-  --border-radius: 8px; /* Slightly larger radius for softer look */
-  --border-width: 1px;
+  /* --- Borders --- */
+  --border-color:  var(--brand-200);
+  --border-radius: 8px;
+  --border-width:  1px;
 
-  /* Shadows */
-  --box-shadow: 0 2px 12px rgba(4, 63, 33, 0.08); /* Soft shadow with brand color */
+  /* --- Shadows --- */
+  --box-shadow: 0 2px 12px rgba(26, 10, 0, 0.08);
 
-  /* Transitions */
+  /* --- Transitions --- */
   --transition-speed: 0.3s;
-} 
+}

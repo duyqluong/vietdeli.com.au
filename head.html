@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/header-footer-styles.css?v=<?php echo ASSET_VERSION; ?>">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>css/cta-pickup.css?v=<?php echo ASSET_VERSION; ?>">
 
-    <!-- Performance optimizations -->
+    <!-- Performance optimizations — preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -32,8 +32,8 @@
     <!-- Responsive design enhancement -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Security -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <!-- Security — allows Google Fonts, inline scripts/styles, and self-hosted assets -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com;">
 
     <!-- Add page-specific metadata in individual pages -->
 </head>

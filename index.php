@@ -101,15 +101,29 @@ require_once __DIR__ . '/config/constants.php';
 
     <main>
         <section class="hero" role="banner" aria-label="Hero section">
+            <!-- Full-screen background image -->
+            <div class="hero-bg" aria-hidden="true">
+                <img src="images/banh-mi-viet-deli.JPG" alt="" fetchpriority="high">
+            </div>
+
             <div class="hero-content">
-                <h1>Authentic Vietnamese Street Food in Perth</h1>
-                <p>Savor the vibrant flavors of Vietnam with our freshly crafted <em>Bánh Mì</em> sandwiches, aromatic <em>Phở</em> noodle soup, and traditional Vietnamese dishes made with love and fresh ingredients daily.</p>
-                
-                <div class="hero-food-image">
-                    <img src="images/banh-mi-viet-deli.JPG" alt="Fresh Vietnamese Banh Mi Sandwich" loading="lazy">
-                    <div class="food-overlay"></div>
+                <!-- Eyebrow label -->
+                <span class="hero-eyebrow">Family-Owned · Myaree, Perth</span>
+
+                <!-- Main heading -->
+                <h1>Authentic Vietnamese<br><em>Street Food</em> in Perth</h1>
+
+                <!-- Decorative dots divider -->
+                <div class="hero-divider" aria-hidden="true">
+                    <div class="hero-divider-dot"></div>
+                    <div class="hero-divider-dot"></div>
+                    <div class="hero-divider-dot"></div>
                 </div>
-                
+
+                <!-- Subtitle -->
+                <p>Savor the vibrant flavors of Vietnam with our freshly crafted <em>Bánh Mì</em> sandwiches, aromatic <em>Phở</em> noodle soup, and traditional dishes made with love every day.</p>
+
+                <!-- CTA buttons -->
                 <div class="btn-container">
                     <a href="https://vietdeli.orderup.com.au/" class="btn btn-primary">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -123,10 +137,11 @@ require_once __DIR__ . '/config/constants.php';
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 12h18m-9-9l9 9-9 9"/>
                         </svg>
-                        See Menu
+                        View Menu
                     </a>
                 </div>
-                
+
+                <!-- Trust badges -->
                 <div class="trust-indicators">
                     <div class="trust-item">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -151,6 +166,13 @@ require_once __DIR__ . '/config/constants.php';
                         <span class="trust-text">Fresh Daily</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- Animated scroll cue -->
+            <div class="hero-scroll" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14m-5-5l5 5 5-5"/>
+                </svg>
             </div>
         </section>
 
