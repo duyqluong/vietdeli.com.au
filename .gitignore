@@ -35,3 +35,9 @@ yarn-error.log*
 # User-generated content
 uploads/
 uploads/**/*
+
+# Local dev tooling — not part of production site
+serve.py
+preview.html
+menu-preview.html
+.claude/
