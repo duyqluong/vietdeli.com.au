@@ -294,10 +294,19 @@
     letter-spacing: 0.02em;
 }
 
+/* --- Ticker pinned inside hero --- */
+.hero .home-ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
 /* --- Animated Scroll Indicator --- */
 .hero-scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
