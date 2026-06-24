@@ -166,7 +166,7 @@ require_once __DIR__ . '/../config/constants.php';
     <!-- ── Compact Page Hero ── -->
     <div class="menu-page-hero">
         <div class="menu-page-hero-bg" aria-hidden="true">
-            <img src="images/gallery/banh-mi-station.jpg" alt="" fetchpriority="high">
+            <img src="images/banh-mi-viet-deli.JPG" alt="" fetchpriority="high">
         </div>
         <div class="menu-page-hero-content">
             <nav class="menu-page-breadcrumb" aria-label="Breadcrumb">
@@ -213,16 +213,30 @@ require_once __DIR__ . '/../config/constants.php';
             <div class="menu-order-cta" role="complementary">
                 <div class="menu-order-cta-text">
                     <strong>Ready to order?</strong>
-                    Skip the queue &mdash; order online for pickup
+                    Pickup via OrderUp &middot; Delivery via Uber Eats or DoorDash
                 </div>
-                <a href="https://vietdeli.orderup.com.au/" class="menu-order-cta-btn" target="_blank" rel="noopener">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    Order Online
-                </a>
+                <div class="menu-cta-actions">
+                    <a href="https://vietdeli.orderup.com.au/" class="menu-order-cta-btn" target="_blank" rel="noopener noreferrer">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        Order Pickup
+                    </a>
+                    <a href="https://www.ubereats.com/au/store/viet-deli/ngTgtA3eULKj2GBHK-67ug"
+                       class="menu-cta-platform-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Uber Eats
+                    </a>
+                    <a href="https://www.doordash.com/en/store/viet-deli-myaree-28168098/61261756/"
+                       class="menu-cta-platform-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        DoorDash
+                    </a>
+                </div>
             </div>
 
             <!-- ════════════════════════════════════
@@ -231,7 +245,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="banh-mi" aria-labelledby="cat-banh-mi">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/banh-mi.jpg" alt="Banh Mi at Viet Deli" loading="lazy">
+                        <img src="images/banh-mi-pork-belly.jpg" alt="Bánh Mì at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Vietnamese Sandwiches</div>
@@ -314,7 +328,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="pho" aria-labelledby="cat-pho">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/gallery/combination-pho-bowl.jpg" alt="Pho at Viet Deli" loading="lazy">
+                        <img src="images/pho-bowl.jpg" alt="Phở at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">
@@ -400,7 +414,10 @@ require_once __DIR__ . '/../config/constants.php';
                  BUN — Vietnamese Vermicelli Bowls
                  ════════════════════════════════════ -->
             <section class="menu-cat-section" id="bun" aria-labelledby="cat-bun">
-                <div class="menu-cat-header no-image">
+                <div class="menu-cat-header has-image">
+                    <div class="menu-cat-img-wrap">
+                        <img src="images/bun-bowl.jpg" alt="Bún at Viet Deli" loading="lazy">
+                    </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">
                             Vietnamese Vermicelli Bowls
@@ -521,7 +538,10 @@ require_once __DIR__ . '/../config/constants.php';
                  COM — Vietnamese Rice Dishes
                  ════════════════════════════════════ -->
             <section class="menu-cat-section" id="com" aria-labelledby="cat-com">
-                <div class="menu-cat-header no-image">
+                <div class="menu-cat-header has-image">
+                    <div class="menu-cat-img-wrap">
+                        <img src="images/com-rice.png" alt="Cơm — Vietnamese Rice Dishes at Viet Deli" loading="lazy">
+                    </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">
                             Vietnamese Rice Dishes
@@ -599,7 +619,10 @@ require_once __DIR__ . '/../config/constants.php';
                  GOI — Vietnamese Salad
                  ════════════════════════════════════ -->
             <section class="menu-cat-section" id="goi" aria-labelledby="cat-goi">
-                <div class="menu-cat-header no-image">
+                <div class="menu-cat-header has-image">
+                    <div class="menu-cat-img-wrap">
+                        <img src="images/salad-bowl.jpg" alt="Gỏi Vietnamese Salad at Viet Deli" loading="lazy">
+                    </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">
                             Vietnamese Salad
@@ -685,7 +708,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="fresh-rolls" aria-labelledby="cat-fresh-rolls">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/spring-rolls.jpg" alt="Fresh Rolls at Viet Deli" loading="lazy">
+                        <img src="images/fresh-rolls.jpg" alt="Fresh Rolls at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Hand-Rolled &middot; 2 per serve</div>
@@ -753,7 +776,10 @@ require_once __DIR__ . '/../config/constants.php';
                  SIDE DISHES
                  ════════════════════════════════════ -->
             <section class="menu-cat-section" id="sides" aria-labelledby="cat-sides">
-                <div class="menu-cat-header no-image">
+                <div class="menu-cat-header has-image">
+                    <div class="menu-cat-img-wrap">
+                        <img src="images/spring-rolls-new.jpg" alt="Side Dishes at Viet Deli" loading="lazy">
+                    </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Perfect to Share</div>
                         <h2 id="cat-sides">Side Dishes</h2>
@@ -798,7 +824,10 @@ require_once __DIR__ . '/../config/constants.php';
                  BAO BUNS
                  ════════════════════════════════════ -->
             <section class="menu-cat-section" id="bao" aria-labelledby="cat-bao">
-                <div class="menu-cat-header no-image">
+                <div class="menu-cat-header has-image">
+                    <div class="menu-cat-img-wrap">
+                        <img src="images/bao-buns.png" alt="Bao Buns at Viet Deli" loading="lazy">
+                    </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Steamed &middot; Sold Individually</div>
                         <h2 id="cat-bao">Bao Buns</h2>
@@ -847,7 +876,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="drinks" aria-labelledby="cat-drinks">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/coffee.jpg" alt="Vietnamese Coffee at Viet Deli" loading="lazy">
+                        <img src="images/coffee-new.jpg" alt="Vietnamese Coffee at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Beverages</div>
@@ -933,7 +962,11 @@ require_once __DIR__ . '/../config/constants.php';
                 var targetId = this.getAttribute('href').slice(1);
                 var target = document.getElementById(targetId);
                 if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                var navInner = document.querySelector('.menu-cat-nav-inner');
+                if (navInner) {
+                    var tabCenter = this.offsetLeft + this.offsetWidth / 2;
+                    navInner.scrollTo({ left: tabCenter - navInner.clientWidth / 2, behavior: 'smooth' });
+                }
             });
         });
     })();

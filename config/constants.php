@@ -7,7 +7,7 @@ $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
 
 // Set the base URL accordingly
 if ($is_localhost) {
-    define('SITE_URL', '/vietdeli/');
+    define('SITE_URL', '/');
 } else {
     define('SITE_URL', '/');  // For vietdeli.com.au
 }

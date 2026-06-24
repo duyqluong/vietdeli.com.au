@@ -1,0 +1,377 @@
+/* ============================================================
+   VIET DELI — CATERING PAGE  (premium redesign)
+   ============================================================ */
+
+/* ── Shared reveal animation ─────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(.22,.68,0,1.1),
+                transform 0.75s cubic-bezier(.22,.68,0,1.1);
+}
+.reveal.visible  { opacity: 1; transform: translateY(0); }
+.reveal-delay-1  { transition-delay: 0.12s; }
+.reveal-delay-2  { transition-delay: 0.24s; }
+.reveal-delay-3  { transition-delay: 0.36s; }
+
+/* ── Eyebrow labels ──────────────────────────────────────── */
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-family-primary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 0.65rem;
+}
+.eyebrow-dark {
+    display: inline-block;
+    font-family: var(--font-family-primary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 0.65rem;
+}
+
+/* ── Inner wrapper ───────────────────────────────────────── */
+.catering-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.catering-hero {
+    position: relative;
+    background: var(--brand-950);
+    overflow: hidden;
+    padding: 8rem 0 7rem;
+}
+.catering-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 60% at 20% 50%, rgba(201,136,58,0.1) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 80% 30%, rgba(201,136,58,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+.catering-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+.catering-hero-inner h1 {
+    font-family: var(--font-family-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.catering-hero-inner p {
+    font-family: var(--font-family-primary);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.58);
+    margin: 0 0 2.5rem;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catering-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 15px 34px;
+    background: var(--red-500);
+    color: #fff;
+    border-radius: 8px;
+    font-family: var(--font-family-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: 0 6px 28px rgba(184,58,31,0.46);
+    transition: background 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+.catering-cta-btn:hover {
+    background: var(--red-400);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(184,58,31,0.58);
+}
+
+/* ============================================================
+   WHAT WE OFFER
+   ============================================================ */
+.catering-what {
+    background: var(--brand-50);
+    padding: 6rem 0;
+}
+.catering-what-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+.catering-what-text h2 {
+    font-family: var(--font-family-display);
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--brand-950);
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    margin: 0 0 1.25rem;
+}
+.catering-what-text p {
+    font-family: var(--font-family-primary);
+    font-size: 0.93rem;
+    line-height: 1.8;
+    color: var(--brand-600);
+    margin: 0 0 1rem;
+}
+.catering-what-text p:last-child { margin-bottom: 0; }
+
+/* Images stack */
+.catering-what-images {
+    position: relative;
+    height: 460px;
+}
+.catering-img-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78%;
+    height: 82%;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 20px 56px rgba(26,10,0,0.15);
+    display: block;
+    transition: transform 0.6s cubic-bezier(.22,.68,0,1.2);
+}
+.catering-img-secondary {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 54%;
+    height: 52%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(26,10,0,0.18);
+    border: 4px solid var(--brand-50);
+    display: block;
+    transition: transform 0.6s cubic-bezier(.22,.68,0,1.2) 0.05s;
+}
+.catering-what-images:hover .catering-img-main { transform: scale(1.02); }
+.catering-what-images:hover .catering-img-secondary { transform: scale(1.03); }
+
+/* ============================================================
+   EVENT TYPES
+   ============================================================ */
+.catering-events {
+    background: #fff;
+    padding: 6rem 0;
+    border-top: 1px solid rgba(26,10,0,0.055);
+}
+.catering-events > .catering-inner > .eyebrow-dark {
+    display: block;
+    text-align: center;
+}
+.catering-events h2 {
+    font-family: var(--font-family-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--brand-950);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 3.5rem;
+}
+
+.catering-events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.catering-event-card {
+    background: var(--brand-50);
+    border: 1px solid rgba(26,10,0,0.07);
+    border-radius: 16px;
+    padding: 2rem 1.75rem 2.25rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.catering-event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 52px rgba(26,10,0,0.1);
+    border-color: rgba(201,136,58,0.2);
+}
+.catering-event-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    background: rgba(201,136,58,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--accent-gold);
+    transition: background 0.25s ease;
+}
+.catering-event-card:hover .catering-event-icon {
+    background: rgba(201,136,58,0.18);
+}
+.catering-event-card h3 {
+    font-family: var(--font-family-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-950);
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+}
+.catering-event-card p {
+    font-family: var(--font-family-primary);
+    font-size: 0.85rem;
+    line-height: 1.72;
+    color: var(--brand-600);
+    margin: 0;
+}
+
+/* ============================================================
+   CONTACT CTA
+   ============================================================ */
+.catering-contact {
+    background: var(--brand-950);
+    padding: 6rem 0 7rem;
+    position: relative;
+    overflow: hidden;
+}
+.catering-contact::before {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(201,136,58,0.1) 0%, transparent 65%);
+    pointer-events: none;
+}
+.catering-contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+.catering-contact-text h2 {
+    font-family: var(--font-family-display);
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    margin: 0 0 1.25rem;
+}
+.catering-contact-text p {
+    font-family: var(--font-family-primary);
+    font-size: 0.93rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.52);
+    margin: 0 0 0.9rem;
+}
+.catering-contact-text p:last-child { margin-bottom: 0; }
+.catering-contact-text .eyebrow { margin-bottom: 0.6rem; }
+
+.catering-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+.catering-contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    text-decoration: none;
+    transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
+}
+.catering-contact-card:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(201,136,58,0.3);
+    transform: translateX(4px);
+}
+.catering-contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: rgba(201,136,58,0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+.catering-contact-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.catering-contact-label {
+    font-family: var(--font-family-primary);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+}
+.catering-contact-value {
+    font-family: var(--font-family-primary);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.45;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+    .catering-events-grid { grid-template-columns: repeat(2, 1fr); }
+    .catering-what-grid { gap: 3.5rem; }
+    .catering-contact-box { gap: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .catering-hero { padding: 6rem 0 5rem; }
+    .catering-what { padding: 4rem 0; }
+    .catering-what-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .catering-what-images { height: 320px; }
+    .catering-events { padding: 4rem 0; }
+    .catering-events-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .catering-contact { padding: 4rem 0 5rem; }
+    .catering-contact-box { grid-template-columns: 1fr; gap: 2.5rem; }
+    .catering-inner { padding: 0 1.25rem; }
+}
+
+@media (max-width: 480px) {
+    .catering-hero-inner h1 { font-size: 2.1rem; }
+    .catering-events-grid { grid-template-columns: 1fr; }
+    .catering-what-images { height: 260px; }
+    .catering-cta-btn { width: 100%; justify-content: center; }
+}

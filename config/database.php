@@ -62,6 +62,6 @@ try {
     ) ENGINE=InnoDB");
     
 } catch(PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    $pdo = null;
 }
 ?>

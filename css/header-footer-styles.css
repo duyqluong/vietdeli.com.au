@@ -214,6 +214,41 @@
     filter: invert(56%) sepia(75%) saturate(1887%) hue-rotate(325deg) brightness(99%) contrast(96%);
 }
 
+.footer-delivery-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.footer-delivery-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: color var(--transition-speed) ease;
+    line-height: 1.6;
+}
+
+.footer-delivery-link::before {
+    content: '→';
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: transform var(--transition-speed) ease;
+}
+
+.footer-delivery-link:hover {
+    color: var(--accent-color);
+}
+
+.footer-delivery-link:hover::before {
+    transform: translateX(3px);
+}
+
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
@@ -227,7 +262,59 @@
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
-    color: white; /* Changed to white to match desktop nav */
+    color: white;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+/* =============================================
+   STICKY MOBILE ORDER BUTTON
+   ============================================= */
+.sticky-order-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-order-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        position: fixed;
+        bottom: 24px;
+        right: 20px;
+        z-index: 999;
+        background: var(--red-500);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0 22px;
+        border-radius: 100px;
+        font-family: var(--font-family-primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        box-shadow: 0 4px 20px rgba(184, 58, 31, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
+        min-height: 52px;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.28s ease, transform 0.28s ease;
+        pointer-events: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .sticky-order-btn.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .sticky-order-btn:active {
+        background: var(--red-400);
+        box-shadow: 0 2px 10px rgba(184, 58, 31, 0.35);
+        transform: scale(0.96);
+        transition: transform 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+    }
 }
 
 @media (max-width: 768px) {
@@ -241,7 +328,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--primary-text-color); /* Changed to match header background */
+        background-color: var(--brand-950);
         flex-direction: column;
         padding: 1rem 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -253,7 +340,7 @@
 
     .main-nav ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: calc(var(--spacing-unit) * 2);
     }
 
     .main-nav ul li {
@@ -263,40 +350,26 @@
 
     .main-nav a {
         display: block;
-        padding: 0.75rem 1rem;
-        color: white; /* Ensuring text is white on mobile too */
+        padding: var(--padding-small);
+        font-size: calc(var(--font-size-base) - 2px);
+        color: white;
     }
 
     .main-nav .cta-button {
         margin: 0.5rem auto;
         width: max-content;
+        padding: 0.4rem 0.8rem;
     }
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-nav ul {
-        gap: calc(var(--spacing-unit) * 2);
-    }
-    
-    .main-nav a {
-        padding: var(--padding-small);
-        font-size: calc(var(--font-size-base) - 2px);
-    }
-    
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .social-links {
         justify-content: center;
     }
-    
-    .main-nav .cta-button {
-        padding: 0.4rem 0.8rem;
-    }
-    
+
     .footer-section h3::after {
         left: 50%;
         transform: translateX(-50%);

@@ -1,26 +1,23 @@
 /* ========================================
-   CTA PICKUP SECTION STYLES
+   CTA PICKUP SECTION — DARK PREMIUM
    ======================================== */
 
 .cta-pickup {
-    background-color: transparent;
+    background-color: var(--brand-950);
 }
 
 .cta-pickup-container {
     max-width: var(--section-max-width);
     margin: 0 auto;
     padding: var(--section-padding);
-    background-color: var(--secondary-bg-color);
-    border-radius: 0;
-    box-shadow: none;
+    background-color: transparent;
     position: relative;
     overflow: visible;
-    margin-bottom: 0;
     text-align: left;
 }
 
 .cta-pickup h2 {
-    color: var(--primary-text-color);
+    color: #ffffff;
     font-family: var(--font-family-custom);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     margin-bottom: 3rem;
@@ -37,23 +34,27 @@
     left: 0;
     width: 80px;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: var(--accent-gold);
 }
 
-.cta-pickup p {
-    color: var(--secondary-text-color);
+.cta-pickup > .cta-pickup-container > p {
+    color: rgba(255, 255, 255, 0.72);
     line-height: 1.7;
     margin-bottom: 3rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: normal;
-    max-width: 800px;
+    max-width: 680px;
 }
+
+/* ========================================
+   ORDER OPTION CARDS
+   ======================================== */
 
 .cta-actions {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
+    gap: 1.5rem;
+    margin: 3rem 0 0;
 }
 
 .order-option {
@@ -61,8 +62,8 @@
     align-items: flex-start;
     gap: 1.5rem;
     padding: 2rem;
-    background-color: var(--accent-cream);
-    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
     position: relative;
@@ -74,40 +75,40 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px;
+    width: 3px;
     height: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--accent-gold);
     transition: width 0.3s ease;
 }
 
-.order-option:hover::before {
-    width: 6px;
+.order-option:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(201, 136, 58, 0.40);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
-.order-option:hover {
-    transform: translateY(-1px);
-    background-color: var(--secondary-bg-color);
-    border-color: var(--accent-color);
-    box-shadow: var(--box-shadow);
+.order-option:hover::before {
+    width: 5px;
 }
 
 .order-icon {
     flex-shrink: 0;
     width: 50px;
     height: 50px;
-    background-color: var(--primary-bg-color);
+    background-color: rgba(201, 136, 58, 0.12);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-color);
+    color: var(--accent-gold);
     transition: all 0.3s ease;
 }
 
 .order-option:hover .order-icon {
+    background-color: var(--accent-gold);
+    color: var(--brand-950);
     transform: scale(1.05);
-    background-color: var(--accent-color);
-    color: white;
 }
 
 .order-content {
@@ -115,16 +116,17 @@
 }
 
 .order-content h3 {
-    color: var(--primary-text-color);
-    font-size: 1.5rem;
+    color: #ffffff;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: var(--font-family-custom);
 }
 
 .order-content p {
-    color: var(--secondary-text-color);
+    color: rgba(255, 255, 255, 0.62);
     margin-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.97rem;
     line-height: 1.6;
 }
 
@@ -136,39 +138,43 @@
     border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.93rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .order-content .btn-primary {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--accent-gold);
+    color: var(--brand-950);
+    border-color: var(--accent-gold);
 }
 
 .order-content .btn-primary:hover {
-    background-color: var(--primary-text-color);
+    background-color: #d4a050;
+    border-color: #d4a050;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(6, 148, 59, 0.2);
+    box-shadow: 0 4px 16px rgba(201, 136, 58, 0.40);
 }
 
 .order-content .btn-secondary {
     background-color: transparent;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.28);
 }
 
 .order-content .btn-secondary:hover {
-    background-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.09);
     color: white;
+    border-color: rgba(255, 255, 255, 0.55);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(6, 148, 59, 0.2);
 }
 
 .order-divider {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     position: relative;
 }
 
@@ -177,83 +183,155 @@
     content: '';
     flex: 1;
     height: 1px;
-    background-color: rgba(6, 148, 59, 0.15);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .order-divider span {
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-text-color);
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.35);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(6, 148, 59, 0.15);
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
    ======================================== */
-@media (min-width: 768px) {
+
+/* Tablet: side-by-side cards */
+@media (min-width: 769px) {
     .cta-actions {
         flex-direction: row;
         align-items: stretch;
-        gap: 3rem;
+        gap: 2rem;
     }
-    
+
     .order-option {
         flex: 1;
         flex-direction: column;
         text-align: center;
         padding: 2.5rem 2rem;
+        align-items: center;
     }
-    
-    .order-icon {
-        align-self: center;
-        margin-bottom: 1rem;
-    }
-    
+
     .order-divider {
         flex-direction: column;
-        margin: 0 1rem;
+        margin: 0;
+        width: auto;
+        flex-shrink: 0;
     }
-    
+
     .order-divider::before,
     .order-divider::after {
         width: 1px;
-        height: 60px;
+        height: 50px;
         flex: none;
+    }
+
+    .order-content p {
+        margin-bottom: 2rem;
     }
 }
 
-@media (max-width: 767px) {
+/* Phone */
+@media (max-width: 768px) {
     .cta-pickup-container {
-        padding: var(--section-padding);
+        padding: 4rem 1rem;
     }
-    
+
     .cta-pickup h2 {
-        font-size: clamp(1.5rem, 4vw, 1.75rem);
+        font-size: clamp(1.5rem, 5vw, 1.75rem);
         margin-bottom: 2.5rem;
     }
-    
+
+    .cta-actions {
+        gap: 0;
+        margin-top: 2rem;
+    }
+
     .order-option {
         flex-direction: column;
         text-align: center;
         padding: 2rem 1.5rem;
+        align-items: center;
     }
-    
-    .order-icon {
-        align-self: center;
-        margin-bottom: 1rem;
-    }
-    
-    .order-content h3 {
-        font-size: 1.25rem;
-    }
-    
+
     .order-content .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .order-content h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-pickup-container {
+        padding: 3.5rem 1rem;
+    }
+}
+
+/* ========================================
+   DELIVERY PLATFORM BUTTONS
+   ======================================== */
+.delivery-platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+.platform-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.82);
+    border: 1.5px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.18s ease;
+    white-space: nowrap;
+}
+
+.platform-btn:hover {
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(201, 136, 58, 0.5);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.platform-btn svg {
+    flex-shrink: 0;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+}
+
+.platform-btn:hover svg {
+    opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .platform-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .platform-btn {
+        width: 100%;
+        padding: 11px 18px;
     }
 }
