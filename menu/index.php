@@ -925,6 +925,36 @@ require_once __DIR__ . '/../config/constants.php';
                 </div>
             </section>
 
+            <!-- Order Online CTA (bottom) -->
+            <div class="menu-order-cta" role="complementary">
+                <div class="menu-order-cta-text">
+                    <strong>Ready to order?</strong>
+                    Pickup via OrderUp &middot; Delivery via Uber Eats or DoorDash
+                </div>
+                <div class="menu-cta-actions">
+                    <a href="https://vietdeli.orderup.com.au/" class="menu-order-cta-btn" target="_blank" rel="noopener noreferrer">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        Order Pickup
+                    </a>
+                    <a href="https://www.ubereats.com/au/store/viet-deli/ngTgtA3eULKj2GBHK-67ug"
+                       class="menu-cta-platform-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Uber Eats
+                    </a>
+                    <a href="https://www.doordash.com/en/store/viet-deli-myaree-28168098/61261756/"
+                       class="menu-cta-platform-btn"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        DoorDash
+                    </a>
+                </div>
+            </div>
+
             <!-- Allergen Note -->
             <p class="menu-allergen-note">
                 Please inform our staff of any allergies or dietary requirements before ordering.<br>
