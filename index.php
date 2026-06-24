@@ -147,28 +147,28 @@ require_once __DIR__ . '/config/constants.php';
             <div class="hero-scroll" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-5-5l5 5 5-5"/></svg>
             </div>
-
-            <div class="home-ticker" aria-hidden="true">
-                <div class="ticker-track">
-                    <span>Ph&#7903; B&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>B&aacute;nh M&igrave;</span><span class="ticker-dot">&bull;</span>
-                    <span>G&#7887;i Cu&#7889;n</span><span class="ticker-dot">&bull;</span>
-                    <span>B&uacute;n B&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>C&#417;m T&#7845;m</span><span class="ticker-dot">&bull;</span>
-                    <span>Catering</span><span class="ticker-dot">&bull;</span>
-                    <span>Ch&agrave; Gi&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>Open 7 Days</span><span class="ticker-dot">&bull;</span>
-                    <span>Ph&#7903; B&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>B&aacute;nh M&igrave;</span><span class="ticker-dot">&bull;</span>
-                    <span>G&#7887;i Cu&#7889;n</span><span class="ticker-dot">&bull;</span>
-                    <span>B&uacute;n B&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>C&#417;m T&#7845;m</span><span class="ticker-dot">&bull;</span>
-                    <span>Catering</span><span class="ticker-dot">&bull;</span>
-                    <span>Ch&agrave; Gi&ograve;</span><span class="ticker-dot">&bull;</span>
-                    <span>Open 7 Days</span><span class="ticker-dot">&bull;</span>
-                </div>
-            </div>
         </section>
+
+        <div class="home-ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>Ph&#7903; B&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>B&aacute;nh M&igrave;</span><span class="ticker-dot">&bull;</span>
+                <span>G&#7887;i Cu&#7889;n</span><span class="ticker-dot">&bull;</span>
+                <span>B&uacute;n B&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>C&#417;m T&#7845;m</span><span class="ticker-dot">&bull;</span>
+                <span>Catering</span><span class="ticker-dot">&bull;</span>
+                <span>Ch&agrave; Gi&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>Open 7 Days</span><span class="ticker-dot">&bull;</span>
+                <span>Ph&#7903; B&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>B&aacute;nh M&igrave;</span><span class="ticker-dot">&bull;</span>
+                <span>G&#7887;i Cu&#7889;n</span><span class="ticker-dot">&bull;</span>
+                <span>B&uacute;n B&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>C&#417;m T&#7845;m</span><span class="ticker-dot">&bull;</span>
+                <span>Catering</span><span class="ticker-dot">&bull;</span>
+                <span>Ch&agrave; Gi&ograve;</span><span class="ticker-dot">&bull;</span>
+                <span>Open 7 Days</span><span class="ticker-dot">&bull;</span>
+            </div>
+        </div>
 
         <!-- ================================================
              3. SIGNATURE DISHES — show food first
