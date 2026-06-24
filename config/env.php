@@ -3,7 +3,7 @@ function loadEnv() {
     $path = __DIR__ . '/../.env';
     
     if (!file_exists($path)) {
-        die('.env file not found');
+        return;
     }
 
     $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);

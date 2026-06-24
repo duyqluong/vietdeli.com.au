@@ -36,8 +36,13 @@ yarn-error.log*
 uploads/
 uploads/**/*
 
+# Cache files — auto-generated at runtime, not committed
+cache/*.json
+
 # Local dev tooling — not part of production site
 serve.py
 preview.html
 menu-preview.html
+blog-preview.html
+token-usage-example.html
 .claude/
