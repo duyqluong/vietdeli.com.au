@@ -17,4 +17,4 @@ define('UPLOADS_PATH', BASE_PATH . '/uploads');
 define('UPLOADS_URL', SITE_URL . 'uploads');
 
 // Asset version for cache busting - Update this when you change CSS/JS files
-define('ASSET_VERSION', '1.0.0'); 
+define('ASSET_VERSION', '2.0.0'); 
