@@ -32,6 +32,7 @@ require_once __DIR__ . '/config/constants.php';
     <meta name="geo.placename" content="Myaree, Perth">
     <meta name="geo.position" content="-32.039167;115.828611">
     <meta name="ICBM" content="-32.039167, 115.828611">
+    <meta name="google-site-verification" content="EJ2EHgzFDT2eeChw4wV8flOkJPQwMZFsyDk_ElOXhXM">
     <meta name="author" content="Viet Deli">
     <meta name="rating" content="general">
     <meta name="referrer" content="no-referrer-when-downgrade">
