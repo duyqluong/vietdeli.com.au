@@ -2,13 +2,68 @@
 require_once __DIR__ . '/../config/constants.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <base href="<?php echo SITE_URL; ?>">
     <?php include BASE_PATH . '/head.html'; ?>
     <title>Catering & Events — Viet Deli Perth</title>
-    <meta name="description" content="Viet Deli offers catering for events, parties, and corporate functions in Perth. Authentic Vietnamese food for groups. Call us or visit to discuss your event.">
+    <meta name="description" content="Vietnamese catering in Perth — Viet Deli caters for events, corporate lunches, and family gatherings. Fresh Bánh Mì platters, Phở, spring rolls, rice dishes, and more. Call 08 9317 6708.">
+    <meta name="keywords" content="Vietnamese catering Perth, catering events Perth, corporate catering Perth, Vietnamese food catering, Banh Mi catering, Pho catering, Vietnamese platters, Myaree catering">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://www.vietdeli.com.au/catering/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vietdeli.com.au/catering/">
+    <meta property="og:title" content="Catering & Events — Authentic Vietnamese Food | Viet Deli Perth">
+    <meta property="og:description" content="Vietnamese catering for events, corporate lunches, and family gatherings in Perth. Fresh Bánh Mì platters, Phở, spring rolls, and rice dishes — made the same way we make it in-store every day.">
+    <meta property="og:image" content="https://www.vietdeli.com.au/images/gallery/viet-deli-catering.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="Viet Deli">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.vietdeli.com.au/catering/">
+    <meta name="twitter:title" content="Catering & Events — Viet Deli Perth">
+    <meta name="twitter:description" content="Vietnamese catering for events, corporate lunches, and family gatherings in Perth. Call us to discuss your event.">
+    <meta name="twitter:image" content="https://www.vietdeli.com.au/images/gallery/viet-deli-catering.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://www.vietdeli.com.au/" },
+        { "@type": "ListItem", "position": 2, "name": "Catering", "item": "https://www.vietdeli.com.au/catering/" }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Viet Deli",
+      "url": "https://www.vietdeli.com.au/",
+      "telephone": "+61893176708",
+      "email": "vietdelipty@gmail.com",
+      "servesCuisine": ["Vietnamese", "Asian"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 14/47 McCoy Street",
+        "addressLocality": "Myaree",
+        "addressRegion": "WA",
+        "postalCode": "6154",
+        "addressCountry": "AU"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catering Services",
+        "description": "Authentic Vietnamese catering for events, corporate lunches, family gatherings, and special occasions across Perth."
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="css/catering.css?v=<?php echo ASSET_VERSION; ?>">
 </head>
 <body>

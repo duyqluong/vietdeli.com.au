@@ -34,12 +34,43 @@ if ($pdo !== null) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <base href="<?php echo SITE_URL; ?>">
     <?php include '../head.html'; ?>
     <title>Stories from Our Kitchen — Viet Deli Blog</title>
-    <meta name="description" content="Recipes, food culture, and updates from the Viet Deli family in Myaree, Perth.">
+    <meta name="description" content="Recipes, food culture, and stories from the Viet Deli family in Myaree, Perth — Vietnamese cooking, restaurant news, and more.">
+    <meta name="keywords" content="Vietnamese food blog Perth, Viet Deli blog, Vietnamese recipes, Vietnamese restaurant Perth, Banh Mi recipes, Pho recipes">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://www.vietdeli.com.au/blog/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vietdeli.com.au/blog/">
+    <meta property="og:title" content="Stories from Our Kitchen — Viet Deli Blog">
+    <meta property="og:description" content="Recipes, food culture, and stories from the Viet Deli family in Myaree, Perth.">
+    <meta property="og:image" content="https://www.vietdeli.com.au/images/viet-deli-restaurant-hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="Viet Deli">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.vietdeli.com.au/blog/">
+    <meta name="twitter:title" content="Stories from Our Kitchen — Viet Deli Blog">
+    <meta name="twitter:description" content="Recipes, food culture, and stories from the Viet Deli family in Myaree, Perth.">
+    <meta name="twitter:image" content="https://www.vietdeli.com.au/images/viet-deli-restaurant-hero.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vietdeli.com.au/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.vietdeli.com.au/blog/" }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css/blog.css?v=<?php echo ASSET_VERSION; ?>">
 </head>
 <body>

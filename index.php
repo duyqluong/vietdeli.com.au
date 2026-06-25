@@ -36,6 +36,7 @@ require_once __DIR__ . '/config/constants.php';
     <meta name="rating" content="general">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
+    <link rel="preload" as="image" href="images/viet-deli-restaurant-hero.jpg" fetchpriority="high">
     <link rel="stylesheet" href="css/home.css?v=<?php echo ASSET_VERSION; ?>">
 
     <script type="application/ld+json">
@@ -97,7 +98,7 @@ require_once __DIR__ . '/config/constants.php';
         <section class="hero" role="banner" aria-label="Hero section">
             <div class="hero-bg">
                 <img src="images/viet-deli-restaurant-hero.jpg"
-                     alt=""
+                     alt="Viet Deli restaurant in Myaree Perth — authentic Vietnamese food"
                      fetchpriority="high">
             </div>
             <div class="hero-overlay"></div>
