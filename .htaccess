@@ -13,9 +13,6 @@ ServerSignature Off
 RewriteEngine On
 RewriteBase /
 
-# Route sitemap.xml to dynamic sitemap.php
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
-
 # Allow direct access to actual files and directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

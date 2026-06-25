@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /cache/
 Disallow: /config/
 
-Sitemap: https://www.vietdeli.com.au/sitemap.xml
+Sitemap: https://www.vietdeli.com.au/sitemap.php
