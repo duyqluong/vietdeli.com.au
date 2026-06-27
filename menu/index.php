@@ -540,7 +540,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="com" aria-labelledby="cat-com">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/com-rice.png" alt="Cơm — Vietnamese Rice Dishes at Viet Deli" loading="lazy">
+                        <img src="images/com-rice.jpg" alt="Cơm — Vietnamese Rice Dishes at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">
