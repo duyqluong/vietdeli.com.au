@@ -826,7 +826,7 @@ require_once __DIR__ . '/../config/constants.php';
             <section class="menu-cat-section" id="bao" aria-labelledby="cat-bao">
                 <div class="menu-cat-header has-image">
                     <div class="menu-cat-img-wrap">
-                        <img src="images/bao-buns.png" alt="Bao Buns at Viet Deli" loading="lazy">
+                        <img src="images/bao-buns.jpg" alt="Bao Buns at Viet Deli" loading="lazy">
                     </div>
                     <div class="menu-cat-title-wrap">
                         <div class="menu-cat-eyebrow">Steamed &middot; Sold Individually</div>
