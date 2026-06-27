@@ -255,14 +255,14 @@ require_once __DIR__ . '/config/constants.php';
                 <!-- 3 review cards -->
                 <div class="reviews-grid">
                     <div class="review-card tilt-card reveal">
-<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Google</div>
+<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Uber Eats</div>
                         <div class="review-quote">&ldquo;</div>
-                        <p class="review-text">Best pho in Perth — full stop. The broth is deep, rich, and you can taste every hour they put into it. We drive from Fremantle just for this.</p>
+                        <p class="review-text">Yum, the Phở soup was delicious and food was always fresh — and gluten free with no MSG, yay!</p>
                         <div class="review-footer">
-                            <div class="review-avatar">S</div>
+                            <div class="review-avatar">V</div>
                             <div class="review-meta">
-                                <span class="review-name">Sarah M.</span>
-                                <span class="review-location">Applecross</span>
+                                <span class="review-name">Venus M.</span>
+                                <span class="review-location">Nov 2023</span>
                             </div>
                             <div class="review-stars" aria-hidden="true">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -275,14 +275,14 @@ require_once __DIR__ . '/config/constants.php';
                     </div>
 
                     <div class="review-card tilt-card reveal reveal-delay-1">
-<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Google</div>
+<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Uber Eats</div>
                         <div class="review-quote">&ldquo;</div>
-                        <p class="review-text">The bánh mì here is on another level. Fresh bread every time, perfectly seasoned. My whole office orders here for lunch now — nobody complains.</p>
+                        <p class="review-text">First time ordering from here and the Bánh Mì and Phở were delicious. Will order again!</p>
                         <div class="review-footer">
-                            <div class="review-avatar">J</div>
+                            <div class="review-avatar">G</div>
                             <div class="review-meta">
-                                <span class="review-name">James T.</span>
-                                <span class="review-location">Fremantle</span>
+                                <span class="review-name">Gayle E.</span>
+                                <span class="review-location">May 2024</span>
                             </div>
                             <div class="review-stars" aria-hidden="true">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -295,14 +295,14 @@ require_once __DIR__ . '/config/constants.php';
                     </div>
 
                     <div class="review-card tilt-card reveal reveal-delay-2">
-<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Google</div>
+<div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>Posted on Uber Eats</div>
                         <div class="review-quote">&ldquo;</div>
-                        <p class="review-text">A hidden gem in Myaree. The family behind this place puts real love into every dish. Authentic Vietnamese — nothing watered down. We're regulars now.</p>
+                        <p class="review-text">Loved the chicken vermicelli dish — it was so fresh and tasty!</p>
                         <div class="review-footer">
-                            <div class="review-avatar">L</div>
+                            <div class="review-avatar">S</div>
                             <div class="review-meta">
-                                <span class="review-name">Linda K.</span>
-                                <span class="review-location">Booragoon</span>
+                                <span class="review-name">Shaimaa K.</span>
+                                <span class="review-location">Jun 2024</span>
                             </div>
                             <div class="review-stars" aria-hidden="true">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -316,11 +316,11 @@ require_once __DIR__ . '/config/constants.php';
                 </div>
 
                 <div class="reviews-cta reveal">
-                    <a href="https://www.google.com/maps/search/Viet+Deli+Myaree+Perth+WA"
+                    <a href="https://www.ubereats.com/au/store/viet-deli/ngTgtA3eULKj2GBHK-67ug"
                        target="_blank" rel="noopener noreferrer"
                        class="reviews-google-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        Read all reviews on Google
+                        Read all reviews on Uber Eats
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
                     </a>
                 </div>
