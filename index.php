@@ -129,11 +129,11 @@ require_once __DIR__ . '/config/constants.php';
                 </div>
 
                 <div class="trust-indicators">
-                    <a href="https://www.google.com/maps/search/Viet+Deli+Myaree+Perth+WA"
+                    <a href="https://www.ubereats.com/au/store/viet-deli/ngTgtA3eULKj2GBHK-67ug"
                        class="trust-item trust-item--link"
                        target="_blank" rel="noopener noreferrer">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-                        <span class="trust-text">4.8 / 5 Rating</span>
+                        <span class="trust-text">4.5 / 5 &middot; 700+ Reviews</span>
                     </a>
                     <div class="trust-item">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -240,15 +240,15 @@ require_once __DIR__ . '/config/constants.php';
                 <!-- Rating hero -->
                 <div class="reviews-hero reveal">
                     <div class="reviews-rating-block">
-                        <span class="reviews-big-num">4.8</span>
-                        <div class="reviews-stars" aria-label="4.8 out of 5 stars">
+                        <span class="reviews-big-num">4.5</span>
+                        <div class="reviews-stars" aria-label="4.5 out of 5 stars">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-gold)" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 24 24" stroke="none" aria-hidden="true"><defs><linearGradient id="halfStarGold"><stop offset="50%" stop-color="var(--accent-gold)"/><stop offset="50%" stop-color="rgba(201,136,58,0.25)"/></linearGradient></defs><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="url(#halfStarGold)"/></svg>
                         </div>
-                        <span class="reviews-source">on Google Reviews</span>
+                        <a class="reviews-source" href="https://www.ubereats.com/au/store/viet-deli/ngTgtA3eULKj2GBHK-67ug" target="_blank" rel="noopener noreferrer">700+ ratings on Uber Eats</a>
                     </div>
                 </div>
 
@@ -341,8 +341,8 @@ require_once __DIR__ . '/config/constants.php';
                         </div>
                         <div class="story-stats-card">
                             <div class="story-stat">
-                                <span class="story-stat-num">4.8</span>
-                                <span class="story-stat-label">Google Rating</span>
+                                <span class="story-stat-num">4.5</span>
+                                <span class="story-stat-label">Uber Eats Rating</span>
                             </div>
                             <div class="story-stat">
                                 <span class="story-stat-num">7</span>
@@ -646,7 +646,7 @@ require_once __DIR__ . '/config/constants.php';
                 var statsObs = new IntersectionObserver(function (entries) {
                     if (entries[0].isIntersecting) {
                         var nums = statsCard.querySelectorAll('.story-stat-num');
-                        if (nums[0]) animateCount(nums[0], 4.0, 4.8, 1, 1400);
+                        if (nums[0]) animateCount(nums[0], 4.0, 4.5, 1, 1400);
                         if (nums[1]) animateCount(nums[1], 0,   7,   0, 900);
                         statsObs.disconnect();
                     }
