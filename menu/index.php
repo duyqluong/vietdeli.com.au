@@ -973,25 +973,56 @@ require_once __DIR__ . '/../config/constants.php';
         var sections = document.querySelectorAll('.menu-cat-section');
         if (!tabs.length || !sections.length) return;
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    var id = entry.target.getAttribute('id');
-                    tabs.forEach(function (tab) {
-                        tab.classList.toggle('is-active', tab.getAttribute('href') === '#' + id);
-                    });
-                }
-            });
-        }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
+        var header = document.querySelector('.site-header');
+        var catNav = document.querySelector('.menu-cat-nav');
+        var observer = null;
 
-        sections.forEach(function (s) { observer.observe(s); });
+        // Measure the two sticky bars and expose their heights to CSS so the tab bar
+        // sits just below the header and anchored jumps land below both bars.
+        function measure() {
+            var h = header ? header.offsetHeight : 80;
+            var n = catNav ? catNav.offsetHeight : 56;
+            document.documentElement.style.setProperty('--header-h', h + 'px');
+            document.documentElement.style.setProperty('--menu-tabnav-h', n + 'px');
+            return h + n;
+        }
+
+        function buildObserver() {
+            if (observer) observer.disconnect();
+            var offset = measure();
+            observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var id = entry.target.getAttribute('id');
+                        tabs.forEach(function (tab) {
+                            tab.classList.toggle('is-active', tab.getAttribute('href') === '#' + id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-' + (offset + 8) + 'px 0px -55% 0px', threshold: 0 });
+            sections.forEach(function (s) { observer.observe(s); });
+        }
+
+        buildObserver();
+
+        var rt;
+        window.addEventListener('resize', function () {
+            clearTimeout(rt);
+            rt = setTimeout(buildObserver, 150);
+        });
+        // Fonts/images can change the header height after first paint.
+        window.addEventListener('load', measure);
 
         tabs.forEach(function (tab) {
             tab.addEventListener('click', function (e) {
                 e.preventDefault();
+                measure();
                 var targetId = this.getAttribute('href').slice(1);
                 var target = document.getElementById(targetId);
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, '', '#' + targetId);
+                }
                 var navInner = document.querySelector('.menu-cat-nav-inner');
                 if (navInner) {
                     var tabCenter = this.offsetLeft + this.offsetWidth / 2;
